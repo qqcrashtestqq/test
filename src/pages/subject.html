@@ -1,0 +1,2844 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Математика'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="base-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <a href="#" class="header__back">
+                  <svg class="header__back-svg">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+                <h2 class="header__title">Мої предмети</h2>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="content__container container">
+            <section class="subject">
+              <div class="subject__inner">
+                <div class="subject__left">
+                  <div class="subject__subject-card subject-card subject-card--purple">
+                    <div class="subject-card__left">
+                      <h2 class="subject-card__title">Математика</h2>
+                      <div class="subject-card__info">
+                        <div class="subject-card__teacher teacher">
+                          <div class="teacher__img">
+                            <img src="https://picsum.photos/200/300" alt="" />
+                          </div>
+                          Бондар Олег Михайлович
+                        </div>
+                        <div class="subject-card__marks">
+                          <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                          <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                        </div>
+                      </div>
+                      <p class="subject-card__description">
+                        Під час вивчення онлайн-курсу з&nbsp;алгебри для 8-го класу учні ознайомляться
+                        з&nbsp;квадратними коренями та ірраціональними числами. Цей курс покаже приклади застосування
+                        властивостей квадратних коренів при розв’язуванні різних типів задач.
+                      </p>
+                    </div>
+                    <svg class="subject-card__icon">
+                      <use xlink:href="img/sprite.svg#math"></use>
+                    </svg>
+                  </div>
+
+                  <div class="subject__mobile-tabs content-tabs">
+                    <div class="content-tabs__wrapper">
+                      <ul class="content-tabs__list">
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn content-tabs__btn--active" data-tab="Програма">
+                            Програма
+                          </button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Про предмет">Про предмет</button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Статистика">Статистика</button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Додатково">Додатково</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- tab 1 -->
+                  <div class="subject__program" data-tab-content="Програма">
+                    <div class="subject__content-tabs content-tabs content-tabs--static">
+                      <div class="content-tabs__wrapper">
+                        <ul class="content-tabs__list">
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn" data-tab="І семестр">І семестр</button>
+                          </li>
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn content-tabs__btn--active" data-tab="ІІ семестр">
+                              ІІ семестр
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="subject__wrapper">
+                      <div class="subject__block" data-tab-content-list="І семестр">
+                        <ol class="subject__list">
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Повторення і систематизація навчального матеріалу з&nbsp;курсу 7 класу
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Раціональні вирази
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Множини і операції над ними
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <div class="plan__top">
+                              <div class="plan__left">
+                                <svg class="plan__icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+
+                                Контрольна робота за І семестр
+                              </div>
+                              <div class="plan__wrapper">
+                                <time class="plan__date"> 25 квітня, 9:00 </time>
+                                <div class="plan__types types">
+                                  <ul class="types__list">
+                                    <li class="types__unit">
+                                      <div class="types__icon" data-tippy-content="Контрольна робота">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#pen"></use>
+                                        </svg>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <div class="plan__top">
+                              <div class="plan__left">
+                                <svg class="plan__icon">
+                                  <use xlink:href="img/sprite.svg#star"></use>
+                                </svg>
+
+                                Додаткове завдання
+                              </div>
+                              <div class="plan__wrapper">
+                                <time class="plan__date"> 25 квітня, 9:00 </time>
+                                <div class="plan__types types">
+                                  <ul class="types__list">
+                                    <li class="types__unit">
+                                      <div class="types__icon" data-tippy-content="Контрольна робота">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#pen"></use>
+                                        </svg>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="subject__block" data-tab-content-list="ІІ семестр">
+                        <ol class="subject__list">
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Графік показникової функції
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Раціональні вирази
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <button class="plan__top" aria-expanded="false" aria-label="Відкрити розділ">
+                              <div class="plan__left">
+                                <span class="plan__number"></span>
+                                Множини і операції над ними
+                              </div>
+                              <div class="plan__arrow">
+                                <svg class="plan__arrow-svg">
+                                  <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                                </svg>
+                              </div>
+                            </button>
+                            <div class="plan__bottom">
+                              <ol class="plan__list">
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Множина. Елемент множини. Порожня множина.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Підмножина. Переріз і об'єднання множин. Круги Ейлера.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Операції над множинами.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Числові множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Скінченні множини. Взаємно однозначна відповідність між елементами множин.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Рівнопотужні множини. Нескінченні множини. Зліченні множини.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Нескінченні множини. Зліченні множини цілих чисел.
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="plan__item">
+                                  <div class="plan__info">
+                                    <span class="plan__subnumber"></span>
+                                    Розвʼязування вправ з теми «Множини і операції над ними»
+                                  </div>
+                                  <div class="plan__wrapper">
+                                    <time class="plan__date"> 25 квітня, 9:00 </time>
+                                    <div class="plan__types types">
+                                      <ul class="types__list">
+                                        <li class="types__unit">
+                                          <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#webcam"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Домашня робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#home"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+
+                                        <li class="types__unit">
+                                          <div class="types__icon" data-tippy-content="Контрольна робота">
+                                            <svg class="types__icon-svg">
+                                              <use xlink:href="img/sprite.svg#pen"></use>
+                                            </svg>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="types__final">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <div class="plan__top">
+                              <div class="plan__left">
+                                <svg class="plan__icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+
+                                Контрольна робота за І семестр
+                              </div>
+                              <div class="plan__wrapper">
+                                <time class="plan__date"> 25 квітня, 9:00 </time>
+                                <div class="plan__types types">
+                                  <ul class="types__list">
+                                    <li class="types__unit">
+                                      <div class="types__icon" data-tippy-content="Контрольна робота">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#pen"></use>
+                                        </svg>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="subject__plan plan">
+                            <div class="plan__top">
+                              <div class="plan__left">
+                                <svg class="plan__icon">
+                                  <use xlink:href="img/sprite.svg#star"></use>
+                                </svg>
+
+                                Додаткове завдання
+                              </div>
+                              <div class="plan__wrapper">
+                                <time class="plan__date"> 25 квітня, 9:00 </time>
+                                <div class="plan__types types">
+                                  <ul class="types__list">
+                                    <li class="types__unit">
+                                      <div class="types__icon" data-tippy-content="Контрольна робота">
+                                        <svg class="types__icon-svg">
+                                          <use xlink:href="img/sprite.svg#pen"></use>
+                                        </svg>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- tab 4 -->
+                  <div class="subject__additional" data-tab-content="Додатково">
+                    <div class="subject__section">
+                      <h2 class="subject__title">Матеріали уроку:</h2>
+                      <div class="subject__document-block document-block">
+                        <ul class="document-block__list">
+                          <li class="document-block__item document">
+                            <div class="document__wrapper">
+                              <a
+                                href="#"
+                                class="document__remove"
+                                type="button"
+                                aria-label="Завантажити цей документ"
+                                download=""
+                              >
+                                <svg class="document__remove-svg">
+                                  <use xlink:href="img/sprite.svg#download-file"></use>
+                                </svg>
+                              </a>
+                              <svg class="document__image">
+                                <use xlink:href="img/sprite.svg#avatar-image"></use>
+                              </svg>
+                              <span class="document__title">Презентація уроку 2</span>
+                              <small class="document__weight">12 mb</small>
+                            </div>
+                          </li>
+                          <li class="document-block__item document">
+                            <div class="document__wrapper">
+                              <a
+                                href="#"
+                                class="document__remove"
+                                type="button"
+                                aria-label="Завантажити цей документ"
+                                download=""
+                              >
+                                <svg class="document__remove-svg">
+                                  <use xlink:href="img/sprite.svg#download-file"></use>
+                                </svg>
+                              </a>
+                              <svg class="document__image">
+                                <use xlink:href="img/sprite.svg#avatar-image"></use>
+                              </svg>
+                              <span class="document__title">Презентація уроку 2</span>
+                              <small class="document__weight">12 mb</small>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="subject__section">
+                      <h2 class="subject__title">Додаткові посилання:</h2>
+                      <ul class="subject__links">
+                        <li class="subject__unit">
+                          <a href="#" class="subject__link">
+                            <svg><use xlink:href="img/sprite.svg#link"></use></svg>
+                            <span> https://www.houseofmath.com/uk/flk; lfkjq; kl; k;</span>
+                          </a>
+                          <p class="subject__info">
+                            Множини чисел так вiдносяться одна до&nbsp;одної: множина натуральних чисел ℕ включена до
+                            множини цiлих чисел ℤ.
+                          </p>
+                        </li>
+                        <li class="subject__unit">
+                          <a href="#" class="subject__link">
+                            <svg><use xlink:href="img/sprite.svg#link"></use></svg>
+                            <span> https://uk.economy-pedia.com/11040408-numeric-sets</span>
+                          </a>
+                          <p class="subject__info">
+                            Множини чисел так вiдносяться одна до&nbsp;одної: множина натуральних чисел ℕ включена до
+                            множини цiлих чисел ℤ, яка, своєю чергою, включена до&nbsp;множини рацiональних чисел ℚ,
+                            а&nbsp;та, нарештi, включена до&nbsp;множини дiйсних чисел ℝ.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject__right">
+                  <!-- tab 2 -->
+                  <div class="subject__about" data-tab-content="Про предмет">
+                    <div class="subject__description">
+                      <h3 class="subject__head">Опис:</h3>
+                      <p class="subject__text">
+                        Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними коренями
+                        та ірраціональними числами. Цей курс покаже приклади застосування властивостей квадратних
+                        коренів при розв'язуванні різних типів задач.
+                      </p>
+                    </div>
+                    <div class="subject__teacher teacher-card teacher-card--big">
+                      <div class="teacher-card__top">
+                        <div class="teacher-card__image">
+                          <img src="https://picsum.photos/200/300" alt="" />
+                        </div>
+                        <div class="teacher-card__info">
+                          <div class="teacher-card__name">Кайдаш Людмила Миколаївна</div>
+                          <div class="teacher-card__status">Викладач математики, Класний керівник</div>
+                        </div>
+                      </div>
+                      <button class="teacher-card__question">
+                        <svg class="teacher-card__question-svg">
+                          <use xlink:href="img/sprite.svg#chat"></use>
+                        </svg>
+                        Задати питання
+                      </button>
+                    </div>
+                    <div class="subject__material-card material-card">
+                      <h3 class="material-card__title">Матеріали:</h3>
+                      <ul class="material-card__list">
+                        <li class="material-card__item">
+                          <a href="#" class="material-card__link" download>
+                            <svg class="material-card__link-svg">
+                              <use xlink:href="img/sprite.svg#download-file"></use>
+                            </svg>
+                            <span>Алгебра (Мерзляк) 8 клас</span>
+                          </a>
+                        </li>
+                        <li class="material-card__item">
+                          <a href="#" class="material-card__link" download>
+                            <svg class="material-card__link-svg">
+                              <use xlink:href="img/sprite.svg#download-file"></use>
+                            </svg>
+                            <span>Алгебра (Мерзляк) 8 клас з поглибленим вивченням математики</span>
+                          </a>
+                        </li>
+                        <li class="material-card__item">
+                          <a href="#" class="material-card__link" download>
+                            <svg class="material-card__link-svg material-card__link-svg--fill">
+                              <use xlink:href="img/sprite.svg#link"></use>
+                            </svg>
+                            <span>Міністерство освіти України</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- tab 3 -->
+                  <div
+                    class="subject__statistics-block statistics-block statistics-block--row"
+                    data-tab-content="Статистика"
+                  >
+                    <div class="statistics-block__top">
+                      <h2 class="statistics-block__title">Статистика</h2>
+                    </div>
+                    <div class="statistics-block__bottom">
+                      <ul class="statistics-block__list">
+                        <li class="statistics-block__item rating-block">
+                          <div class="rating-block__top">
+                            <h3 class="rating-block__title">Відвідуваність на&nbsp;онлайн уроках</h3>
+                            <svg class="rating-block__icon">
+                              <use xlink:href="img/sprite.svg#webcam"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__bottom">
+                            <div class="rating-block__left">
+                              <span class="rating-block__percent">80%</span>
+                              <svg class="rating-block__arrow rating-block__arrow--green">
+                                <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block__right"><span class="rating-block__mark">16</span>/20</div>
+                          </div>
+                        </li>
+                        <li class="statistics-block__item rating-block">
+                          <div class="rating-block__top">
+                            <h3 class="rating-block__title">Середня прогнозована оцінка</h3>
+                            <svg class="rating-block__icon">
+                              <use xlink:href="img/sprite.svg#statistics"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__bottom">
+                            <div class="rating-block__left">
+                              <span class="rating-block__percent">80%</span>
+                              <svg class="rating-block__arrow rating-block__arrow--red">
+                                <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block__right"><span class="rating-block__mark">9</span>/10</div>
+                          </div>
+                        </li>
+                        <li class="statistics-block__item rating-block">
+                          <div class="rating-block__top">
+                            <h3 class="rating-block__title">Відвідуваність на&nbsp;онлайн уроках</h3>
+                            <svg class="rating-block__icon">
+                              <use xlink:href="img/sprite.svg#webcam"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__bottom">
+                            <div class="rating-block__left">
+                              <span class="rating-block__percent">80%</span>
+                              <svg class="rating-block__arrow rating-block__arrow--green">
+                                <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block__right"><span class="rating-block__mark">16</span>/20</div>
+                          </div>
+                        </li>
+                        <li class="statistics-block__item rating-block">
+                          <div class="rating-block__top">
+                            <h3 class="rating-block__title">Середня прогнозована оцінка</h3>
+                            <svg class="rating-block__icon">
+                              <use xlink:href="img/sprite.svg#statistics"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__bottom">
+                            <div class="rating-block__left">
+                              <span class="rating-block__percent">80%</span>
+                              <svg class="rating-block__arrow rating-block__arrow--green">
+                                <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block__right"><span class="rating-block__mark">9</span>/10</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

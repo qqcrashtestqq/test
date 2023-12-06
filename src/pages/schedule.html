@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Розклад'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="base-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header header--schedule">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <h2 class="header__title">Розклад</h2>
+                <div class="header__stepper stepper">
+                  <button class="stepper__button">
+                    <svg class="stepper__button-svg">
+                      <use xlink:href="img/sprite.svg#chevron-left"></use>
+                    </svg>
+                  </button>
+                  <svg class="stepper__icon">
+                    <use xlink:href="img/sprite.svg#calendar"></use>
+                  </svg>
+                  <span class="stepper__value"> 05 - 11 червня 2023 </span>
+                  <button class="stepper__button">
+                    <svg class="stepper__button-svg">
+                      <use xlink:href="img/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="header__right">
+                <div class="header__schedule-tabs schedule-tabs">
+                  <button class="schedule-tabs__button schedule-tabs__button--active">День</button>
+                  <button class="schedule-tabs__button">Тиждень</button>
+                  <button class="schedule-tabs__button">Місяць</button>
+                </div>
+
+                <div class="header__select select select--border">
+                  <div class="select__top">
+                    <span class="select__value">День</span>
+                    <svg class="select__top-svg">
+                      <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="select__bottom">
+                    <div class="select__wrapper">
+                      <ul class="select__list">
+                        <li class="select__item">Тиждень</li>
+                        <li class="select__item">Місяць</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="content-tabs" id="main-tab">
+          <div class="content-tabs__wrapper">
+            <ul class="content-tabs__list">
+              <li class="content-tabs__item">
+                <button class="content-tabs__btn content-tabs__btn--active" data-tab="Розклад уроків">
+                  Розклад уроків
+                </button>
+              </li>
+
+              <li class="content-tabs__item">
+                <button class="content-tabs__btn" data-tab="Задачі">Задачі</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content" id="main-content">
+          <div class="content__container container">
+            <!-- Расписание -->
+            <section class="schedule schedule--new" style="display: none">
+              <div class="schedule__inner">
+                <!-- Таб 1 - Уроки -->
+                <div class="schedule__wrapper" data-tab-content="Розклад уроків">
+                  <div class="schedule__block">
+                    <h2 class="schedule__title">Заняття</h2>
+                    <ul class="schedule__lessons lessons-list">
+                      <li class="lessons-list__lesson lesson">
+                        <div class="lesson__image">
+                          <span class="lesson__mark">10, 8</span>
+                          <img src="https://picsum.photos/200/300?random=1" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <div class="lesson__subject">
+                            <span class="lesson__counter"></span>
+                            <a href="#" class="lesson__name">Всесвітня історія</a>
+                          </div>
+                          <span class="lesson__point"></span>
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Бондар Олег Михайлович
+                          </a>
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a href="#" class="lesson__button btn btn--grey" disabled>
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#close"></use></svg>
+                            Пропущено
+                          </a>
+                        </div>
+                      </li>
+                      <li class="schedule__lesson lesson">
+                        <div class="lesson__image">
+                          <span class="lesson__mark">10, 8</span>
+                          <img src="https://picsum.photos/200/300?random=2" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <div class="lesson__subject">
+                            <span class="lesson__counter"></span>
+                            <a href="#" class="lesson__name">Математика</a>
+                          </div>
+
+                          <span class="lesson__point"></span>
+
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Кайдаш Людмила Миколаївна
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a href="#" class="lesson__button btn btn--grey" disabled>
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                            Прослухано
+                          </a>
+                        </div>
+                      </li>
+                      <li class="schedule__lesson lesson">
+                        <div class="lesson__image">
+                          <img src="https://picsum.photos/200/300?random=3" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <div class="lesson__subject">
+                            <span class="lesson__counter"></span>
+                            <a href="#" class="lesson__name">Історія України</a>
+                          </div>
+                          <span class="lesson__point"></span>
+
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Бондар Олег Михайлович
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a href="#" class="lesson__button btn btn--accent">
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#webcam"></use></svg>
+                            Перейти
+                          </a>
+                        </div>
+                      </li>
+                      <li class="schedule__lesson lesson">
+                        <div class="lesson__image">
+                          <img src="https://picsum.photos/200/300?random=4" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <div class="lesson__subject">
+                            <span class="lesson__counter"></span>
+                            <a href="#" class="lesson__name">Історія України</a>
+                          </div>
+                          <span class="lesson__point"></span>
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Бондар Олег Михайлович
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a
+                            class="lesson__button btn btn--accent disabled"
+                            data-tippy-content="Онлайн-урок ще не почався"
+                          >
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#time"></use></svg>
+                            Очікується
+                          </a>
+                        </div>
+                      </li>
+                      <li class="schedule__lesson lesson">
+                        <div class="lesson__image">
+                          <img src="https://picsum.photos/200/300?random=5" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <div class="lesson__subject">
+                            <span class="lesson__counter"></span>
+                            <a href="#" class="lesson__name">Фізкультура</a>
+                          </div>
+                          <span class="lesson__point"></span>
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Бондар Олег Михайлович
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a
+                            class="lesson__button btn btn--accent disabled"
+                            data-tippy-content="Онлайн-урок ще не почався"
+                          >
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#time"></use></svg>
+                            Очікується
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="schedule__block">
+                    <h2 class="schedule__title">Курси</h2>
+                    <ul class="schedule__lessons lessons-list">
+                      <li class="lessons-list__lesson lesson">
+                        <div class="lesson__image">
+                          <img src="https://picsum.photos/200/300?random=7" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <a href="#" class="lesson__name">Основи образотворчого мистецтва</a>
+                          <span class="lesson__point"></span>
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Бондар Олег Михайлович
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a
+                            class="lesson__button btn btn--accent disabled"
+                            data-tippy-content="Онлайн-урок ще не почався"
+                          >
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#time"></use></svg>
+                            Очікується
+                          </a>
+                        </div>
+                      </li>
+                      <li class="lessons-list__lesson lesson">
+                        <div class="lesson__image">
+                          <img src="https://picsum.photos/200/300?random=6" alt="" />
+                        </div>
+                        <div class="lesson__top">
+                          <a href="#" class="lesson__name">Знайомство з ІТ</a>
+                          <span class="lesson__point"></span>
+
+                          <a href="#" class="lesson__teacher teacher">
+                            <div class="teacher__img">
+                              <img src="https://picsum.photos/200/300" alt="" />
+                            </div>
+                            Мітрошина Ганна Олександрівна
+                          </a>
+
+                          <div class="lesson__right types">
+                            <ul class="types__list">
+                              <li class="types__unit">
+                                <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#webcam"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Домашня робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#home"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Тест">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#test"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li class="types__unit">
+                                <div class="types__icon" data-tippy-content="Контрольна робота">
+                                  <svg class="types__icon-svg">
+                                    <use xlink:href="img/sprite.svg#pen"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="types__final">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lesson__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                        <div class="lesson__functional">
+                          <div class="lesson__times">
+                            <time class="lesson__time">9:00</time>-<time class="lesson__time">9:45</time>
+                          </div>
+                          <a
+                            class="lesson__button btn btn--accent disabled"
+                            data-tippy-content="Онлайн-урок ще не почався"
+                          >
+                            <svg class="btn__icon"><use xlink:href="img/sprite.svg#time"></use></svg>
+                            Очікується
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="schedule__calendar" id="schedule-calendar">calendar</div>
+                <!-- Таб 2 - Курсы -->
+                <div class="schedule__block" data-tab-content="Задачі">
+                  <div class="schedule__todo todo">
+                    <div class="todo__block todo__block--yellow">
+                      <div class="todo__tasks">
+                        <div class="todo__top">
+                          <h2 class="todo__title">Терміново!</h2>
+                        </div>
+                        <div class="todo__bottom">
+                          <div class="todo__wrapper" data-simplebar>
+                            <ul class="todo__list">
+                              <li class="todo__item todo-item">
+                                <div class="todo-item__checkbox checkbox">
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Тест по Укр. мові</div>
+                                    <div class="checkbox__date date date--orange">15.04 9:00</div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="todo__block todo__block--tasks">
+                      <div class="todo__tasks">
+                        <div class="todo__top">
+                          <h2 class="todo__title">Задачі</h2>
+                          <button class="todo__add" id="todo-add" aria-label="Додати задачу">
+                            <svg class="todo__add-svg">
+                              <use xlink:href="img/sprite.svg#plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="todo__bottom">
+                          <div class="todo__wrapper" data-simplebar>
+                            <ul class="todo__list">
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Ранкова зарядка</div>
+                                    <div class="checkbox__date date date--blue">15.04 9:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Тест по Укр. мові</div>
+                                    <div class="checkbox__date date date--blue">15.04 15:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Підготувати реферат по Географії</div>
+                                    <div class="checkbox__date date date--blue">15.04 15:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Записатись до психолога</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Ранкова зарядка</div>
+                                    <div class="checkbox__date date date--blue">15.04 9:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Тест по Укр. мові</div>
+                                    <div class="checkbox__date date date--blue">15.04 15:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Підготувати реферат по Географії</div>
+                                    <div class="checkbox__date date date--blue">15.04 15:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Записатись до психолога</div>
+                                  </div>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="todo__create create">
+                          <div class="create__top">
+                            <div class="create__types">
+                              <button class="create__type">
+                                <div class="create__icon">
+                                  <svg class="create__icon-svg">
+                                    <use xlink:href="img/sprite.svg#calendar-wrapper"></use>
+                                  </svg>
+                                  <span class="create__icon-num">9</span>
+                                </div>
+                                Сьогодні
+                              </button>
+                              <button class="create__type">
+                                <div class="create__icon">
+                                  <svg class="create__icon-svg">
+                                    <use xlink:href="img/sprite.svg#calendar-wrapper"></use>
+                                  </svg>
+                                  <span class="create__icon-num">+1</span>
+                                </div>
+                                Завтра
+                              </button>
+                              <button class="create__type create__type--active">
+                                <div class="create__icon">
+                                  <svg class="create__icon-svg">
+                                    <use xlink:href="img/sprite.svg#close"></use>
+                                  </svg>
+                                </div>
+                                Без дати
+                              </button>
+                            </div>
+                          </div>
+                          <div class="create__main" id="calendar"></div>
+                          <div class="create__bottom">
+                            <button class="create__add-time">Додати час</button>
+
+                            <div class="create__time">
+                              <span class="create__head">Час</span>
+                              <div class="create__select select">
+                                <div class="select__top">
+                                  <span class="select__value"><span>00</span> : <span>00</span></span>
+                                </div>
+                                <div class="select__bottom">
+                                  <div class="select__counter" data-simplebar>
+                                    <ul class="select__times">
+                                      <li class="select__time">01:00</li>
+                                      <li class="select__time">02:00</li>
+                                      <li class="select__time">03:00</li>
+                                      <li class="select__time">04:00</li>
+                                      <li class="select__time">05:00</li>
+                                      <li class="select__time">06:00</li>
+                                      <li class="select__time">07:00</li>
+                                      <li class="select__time">08:00</li>
+                                      <li class="select__time">09:00</li>
+                                      <li class="select__time">10:00</li>
+                                      <li class="select__time">11:00</li>
+                                      <li class="select__time">12:00</li>
+                                      <li class="select__time">13:00</li>
+                                      <li class="select__time">14:00</li>
+                                      <li class="select__time">15:00</li>
+                                      <li class="select__time">16:00</li>
+                                      <li class="select__time">17:00</li>
+                                      <li class="select__time">18:00</li>
+                                      <li class="select__time">19:00</li>
+                                      <li class="select__time">20:00</li>
+                                      <li class="select__time">21:00</li>
+                                      <li class="select__time">22:00</li>
+                                      <li class="select__time">23:00</li>
+                                      <li class="select__time">24:00</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="create__buttons">
+                              <button class="create__button btn btn--trans" id="task-cancel">Скасувати</button>
+                              <button class="create__button btn btn--accent" id="task-save">
+                                <svg class="btn__icon">
+                                  <use xlink:href="img/sprite.svg#webcam"></use>
+                                </svg>
+                                Зберегти
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="todo__tasks todo__tasks--done">
+                        <div class="todo__top">
+                          <h2 class="todo__title">Виконано</h2>
+                          <button class="todo__add" aria-expanded="false" aria-label="Відкрити виконані завдання">
+                            <svg class="todo__add-svg">
+                              <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="todo__bottom">
+                          <div class="todo__wrapper" data-simplebar>
+                            <ul class="todo__list">
+                              @@for (var i = 0; i < 5; i++) {
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" checked />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">Ранкова зарядка</div>
+                                    <div class="checkbox__date date date--blue">15.04 9:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li class="todo__item todo-item">
+                                <label class="todo-item__checkbox checkbox">
+                                  <input type="checkbox" value="" class="checkbox__input" checked />
+                                  <div class="checkbox__block">
+                                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                                    </span>
+                                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                                    </span>
+                                  </div>
+                                  <div class="checkbox__todo">
+                                    <div class="checkbox__value">
+                                      Попередити класуху про відсутність завтра після 1 уроку
+                                    </div>
+                                    <div class="checkbox__date date date--blue">15.04 15:00</div>
+                                  </div>
+                                </label>
+                              </li>
+                              }
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="schedule-table schedule-table--week" style="display: none">
+              <div class="schedule-table__wrapper">
+                <div class="schedule-table__lesson lesson-modal lesson-modal--big">
+                  <div class="lesson-modal__content">
+                    <div class="lesson-modal__top">
+                      <div class="lesson-modal__subject">
+                        <span class="lesson-modal__counter">1</span>
+                        <a href="#" class="lesson-modal__name">Всесвітня історія</a>
+                      </div>
+                      <div class="lesson-modal__right types">
+                        <ul class="types__list">
+                          <li class="types__unit">
+                            <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#webcam"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Домашня робота">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#home"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Тест">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#test"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Контрольна робота">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#pen"></use>
+                              </svg>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <time class="lesson-modal__time">25 квітня, 9:00</time>
+                      <a href="#" class="lesson-modal__teacher teacher">
+                        <div class="teacher__img">
+                          <img src="https://picsum.photos/200/300" alt="" />
+                        </div>
+                        Бондар Олег Михайлович
+                      </a>
+                    </div>
+                    <div class="lesson-modal__bottom">
+                      <div class="lesson-modal__image">
+                        <span class="lesson-modal__mark">10, 8</span>
+                        <img src="https://picsum.photos/200/300?random=1" alt="" />
+                      </div>
+
+                      <div class="lesson-modal__text">
+                        <a href="#">
+                          Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                        </a>
+                      </div>
+                    </div>
+                    <div class="lesson-modal__buttons">
+                      <div class="lesson-modal__times">
+                        <time class="lesson-modal__time">9:00</time>-<time class="lesson-modal__time">9:45</time>
+                      </div>
+                      <a href="#" class="lesson-modal__link btn btn--accent">
+                        <svg class="btn__icon">
+                          <use xlink:href="img/sprite.svg#webcam"></use>
+                        </svg>
+                        Перейти
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- here -->
+                <div class="schedule-table__block" data-simplebar>
+                  <div class="schedule-table__top">
+                    <div class="schedule-table__grid">
+                      <div class="schedule-table__day schedule-table__day--current">
+                        Понеділок
+                        <span class="schedule-table__num">04</span>
+                      </div>
+                      <div class="schedule-table__day">
+                        Вівторок
+                        <span class="schedule-table__num">05</span>
+                      </div>
+                      <div class="schedule-table__day">
+                        Середа
+                        <span class="schedule-table__num">06</span>
+                      </div>
+                      <div class="schedule-table__day">
+                        Четверг
+                        <span class="schedule-table__num">07</span>
+                      </div>
+                      <div class="schedule-table__day">
+                        П’ятниця
+                        <span class="schedule-table__num">08</span>
+                      </div>
+                      <div class="schedule-table__day schedule-table__day--off">
+                        Субота
+                        <span class="schedule-table__num">09</span>
+                      </div>
+                      <div class="schedule-table__day schedule-table__day--off">
+                        Неділя
+                        <span class="schedule-table__num">10</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="schedule-table__content">
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">8:35</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--red">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card"></li>
+                          <li class="schedule-table__card"></li>
+
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--red">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">8:35</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна відповідність між елементами множин.</p>
+                          </li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська мова</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>фізика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--red">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <time class="schedule-table__time">9:30</time>
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <span class="schedule-table__counter"></span>
+                        <ul class="schedule-table__grid">
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--green">
+                              <span>Українська лiтература</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Кайдаш Л. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card"></li>
+                          <li class="schedule-table__card"></li>
+
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--blue">
+                              <span>біологія</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+                          <li class="schedule-table__card lesson-card">
+                            <div class="lesson-card__name lesson-label lesson-label--red">
+                              <span>математика</span>
+                            </div>
+                            <a href="#" class="lesson-card__teacher teacher">
+                              <div class="teacher__img"><img src="https://picsum.photos/200/300" alt="" /></div>
+                              Бондар О. М.
+                            </a>
+                            <p class="lesson-card__descr">Взаємно однозначна</p>
+                          </li>
+
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="schedule-table schedule-table--month">
+              <div class="schedule-table__wrapper">
+                <div class="schedule-table__lesson lesson-modal lesson-modal--big">
+                  <div class="lesson-modal__content">
+                    <div class="lesson-modal__top">
+                      <div class="lesson-modal__subject">
+                        <span class="lesson-modal__counter">1</span>
+                        <a href="#" class="lesson-modal__name">Всесвітня історія</a>
+                      </div>
+                      <div class="lesson-modal__right types">
+                        <ul class="types__list">
+                          <li class="types__unit">
+                            <div class="types__icon types__icon--active" data-tippy-content="Онлайн-урок">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#webcam"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Домашня робота">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#home"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Тест">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#test"></use>
+                              </svg>
+                            </div>
+                          </li>
+                          <li class="types__unit">
+                            <div class="types__icon" data-tippy-content="Контрольна робота">
+                              <svg class="types__icon-svg">
+                                <use xlink:href="img/sprite.svg#pen"></use>
+                              </svg>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <time class="lesson-modal__time">25 квітня, 9:00</time>
+                      <a href="#" class="lesson-modal__teacher teacher">
+                        <div class="teacher__img">
+                          <img src="https://picsum.photos/200/300" alt="" />
+                        </div>
+                        Бондар Олег Михайлович
+                      </a>
+                    </div>
+                    <div class="lesson-modal__bottom">
+                      <div class="lesson-modal__image">
+                        <span class="lesson-modal__mark">10, 8</span>
+                        <img src="https://picsum.photos/200/300?random=1" alt="" />
+                      </div>
+
+                      <div class="lesson-modal__text">
+                        <a href="#">
+                          Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                        </a>
+                      </div>
+                    </div>
+                    <div class="lesson-modal__buttons">
+                      <div class="lesson-modal__times">
+                        <time class="lesson-modal__time">9:00</time>-<time class="lesson-modal__time">9:45</time>
+                      </div>
+                      <a href="#" class="lesson-modal__link btn btn--accent">
+                        <svg class="btn__icon">
+                          <use xlink:href="img/sprite.svg#webcam"></use>
+                        </svg>
+                        Перейти
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-table__overlay" style="display: none">
+                  <div class="schedule-table__lesson lesson lesson--small">
+                    <div class="lesson__image">
+                      <span class="lesson__mark">10, 8</span>
+                      <img src="https://picsum.photos/200/300?random=1" alt="" />
+                    </div>
+                    <div class="lesson__top">
+                      <div class="lesson__head">
+                        <div class="lesson__num">
+                          <span>10</span>
+                          — оцінка за урок
+                        </div>
+                        <time class="lesson__date"> 25 квітня, 9:00 </time>
+                      </div>
+                      <div class="lesson__subject">
+                        <a href="#" class="lesson__name">Всесвітня історія</a>
+                      </div>
+                      <a href="#" class="lesson__teacher teacher">
+                        <div class="teacher__img">
+                          <img src="https://picsum.photos/200/300" alt="" />
+                        </div>
+                        Бондар Олег Михайлович
+                      </a>
+                    </div>
+                    <div class="lesson__text">
+                      <a href="#">
+                        Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                      </a>
+                    </div>
+                    <a href="#" class="lesson__link btn btn--trans">
+                      перейти до уроку
+                      <svg class="btn__icon">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="schedule-table__block">
+                  <div class="schedule-table__top">
+                    <div class="schedule-table__grid">
+                      <div class="schedule-table__day schedule-table__day--current">
+                        Понеділок
+                        <span class="schedule-table__day-short">П</span>
+                      </div>
+                      <div class="schedule-table__day">Вівторок <span class="schedule-table__day-short">В</span></div>
+                      <div class="schedule-table__day">Середа <span class="schedule-table__day-short">С</span></div>
+                      <div class="schedule-table__day">Четверг <span class="schedule-table__day-short">Ч</span></div>
+                      <div class="schedule-table__day">П’ятниця <span class="schedule-table__day-short">П</span></div>
+                      <div class="schedule-table__day schedule-table__day--off">
+                        Субота <span class="schedule-table__day-short">С</span>
+                      </div>
+                      <div class="schedule-table__day schedule-table__day--off">
+                        Неділя <span class="schedule-table__day-short">Н</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="schedule-table__content">
+                    @@for (var i = 0; i < 5; i++) {
+                    <li class="schedule-table__item">
+                      <div class="schedule-table__head">
+                        <div class="schedule-table__line"></div>
+                      </div>
+
+                      <div class="schedule-table__main">
+                        <ul class="schedule-table__grid">
+                          @@for (var i = 0; i < 6; i++) {
+                          <li class="schedule-table__lessons-list lessons-schedule">
+                            <span class="lessons-schedule__date">11</span>
+                            <ul class="lessons-schedule__list">
+                              <li class="lessons-schedule__label lesson-label lesson-label--purple">
+                                <span>Українська мова</span>
+                                <time class="lesson-label__time">08:35</time>
+                              </li>
+                              <li class="lessons-schedule__label lesson-label lesson-label--red">
+                                <span>Математика</span>
+                                <time class="lesson-label__time">09:35</time>
+                              </li>
+                              <li class="lessons-schedule__label lesson-label lesson-label--orange">
+                                <span>Фізкультура</span>
+                                <time class="lesson-label__time">10:35</time>
+                              </li>
+                              <li class="lessons-schedule__label lesson-label lesson-label--green">
+                                <span>Історія</span>
+                                <time class="lesson-label__time">11:35</time>
+                              </li>
+                            </ul>
+                            <button class="lessons-schedule__more">+ ще 4</button>
+
+                            <div class="lessons-schedule__overlay">
+                              <div class="lessons-schedule__modal">
+                                <time class="lessons-schedule__time">13.06.2023</time>
+                                <div class="lessons-schedule__block">
+                                  <h2 class="lessons-schedule__title">Заняття</h2>
+                                  <ul class="lessons-schedule__list">
+                                    <li class="lessons-schedule__label lesson-label lesson-label--purple">
+                                      <span>Українська мова</span>
+                                      <time class="lesson-label__time">08:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--red">
+                                      <span>Математика</span>
+                                      <time class="lesson-label__time">09:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--orange">
+                                      <span>Фізкультура</span>
+                                      <time class="lesson-label__time">10:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--green">
+                                      <span>Історія</span>
+                                      <time class="lesson-label__time">11:35</time>
+                                    </li>
+                                  </ul>
+                                  <ul class="lessons-schedule__sublist">
+                                    @@for (var i = 0; i < 2; i++) {
+                                    <li class="lessons-schedule__subitem">
+                                      <a href="#" class="lessons-schedule__name">Всесвітня історія</a>
+                                      <time class="lessons-schedule__data">25 квітня, 9:00</time>
+                                      <a href="#" class="lessons-schedule__teacher teacher">
+                                        <div class="teacher__img">
+                                          <img src="https://picsum.photos/200/300" alt="" />
+                                        </div>
+                                        Бондар Олег Михайлович
+                                      </a>
+                                    </li>
+                                    <li class="lessons-schedule__subitem">
+                                      <a href="#" class="lessons-schedule__name">Всесвітня історія lkl; k;kq q; k</a>
+                                      <time class="lessons-schedule__data">25 квітня, 9:00</time>
+                                      <a href="#" class="lessons-schedule__teacher teacher">
+                                        <div class="teacher__img">
+                                          <img src="https://picsum.photos/200/300" alt="" />
+                                        </div>
+                                        Бондар Олег Михайлович
+                                      </a>
+                                    </li>
+                                    }
+                                  </ul>
+                                </div>
+                                <div class="lessons-schedule__block">
+                                  <h2 class="lessons-schedule__title">Курси</h2>
+                                  <ul class="lessons-schedule__list">
+                                    <li class="lessons-schedule__label lesson-label lesson-label--purple">
+                                      <span>Українська мова</span>
+                                      <time class="lesson-label__time">08:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--red">
+                                      <span>Математика</span>
+                                      <time class="lesson-label__time">09:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--orange">
+                                      <span>Фізкультура</span>
+                                      <time class="lesson-label__time">10:35</time>
+                                    </li>
+                                    <li class="lessons-schedule__label lesson-label lesson-label--green">
+                                      <span>Історія</span>
+                                      <time class="lesson-label__time">11:35</time>
+                                    </li>
+                                  </ul>
+                                  <ul class="lessons-schedule__sublist">
+                                    @@for (var i = 0; i < 1; i++) {
+                                    <li class="lessons-schedule__subitem">
+                                      <a href="#" class="lessons-schedule__name">Всесвітня історія</a>
+                                      <time class="lessons-schedule__data">25 квітня, 9:00</time>
+                                      <a href="#" class="lessons-schedule__teacher teacher">
+                                        <div class="teacher__img">
+                                          <img src="https://picsum.photos/200/300" alt="" />
+                                        </div>
+                                        Бондар Олег Михайлович
+                                      </a>
+                                    </li>
+                                    <li class="lessons-schedule__subitem">
+                                      <a href="#" class="lessons-schedule__name">Всесвітня історія lkl; k;kq q; k</a>
+                                      <time class="lessons-schedule__data">25 квітня, 9:00</time>
+                                      <a href="#" class="lessons-schedule__teacher teacher">
+                                        <div class="teacher__img">
+                                          <img src="https://picsum.photos/200/300" alt="" />
+                                        </div>
+                                        Бондар Олег Михайлович
+                                      </a>
+                                    </li>
+                                    }
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          }
+
+                          <!-- <li class="schedule-table__card schedule-table__card--day-off"></li> -->
+                          <li class="schedule-table__card schedule-table__card--day-off"></li>
+                        </ul>
+                      </div>
+                    </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

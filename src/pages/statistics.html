@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Головна'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="base-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <h2 class="header__title">Статистика успішності</h2>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="content-tabs" id="main-tab">
+          <div class="content-tabs__wrapper">
+            <ul class="content-tabs__list">
+              <li class="content-tabs__item">
+                <button class="content-tabs__btn content-tabs__btn--active" data-tab="Статистика">Статистика</button>
+              </li>
+              <li class="content-tabs__item">
+                <button class="content-tabs__btn" data-tab="Прогнозована оцінка">Прогнозована оцінка</button>
+              </li>
+              <li class="content-tabs__item">
+                <button class="content-tabs__btn" data-tab="Всі оцінки">Всі оцінки</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content" id="main-content">
+          <div class="content__container container">
+            <!-- tab 1 -->
+            <div class="statistics statistics--big" data-tab-content="Статистика">
+              <div class="statistics__inner">
+                <div class="statistics__block statistics-block" data-tab-content="Статистика">
+                  <div class="statistics-block__top">
+                    <div class="statistics-block__left">
+                      <h2 class="statistics-block__title">Статистика</h2>
+                      drop
+                    </div>
+                  </div>
+                  <div class="statistics-block__bottom">
+                    <ul class="statistics-block__list">
+                      <li class="statistics-block__item rating-block">
+                        <div class="rating-block__top">
+                          <h3 class="rating-block__title">Відвідуваність на онлайн уроках</h3>
+                          <svg class="rating-block__icon">
+                            <use xlink:href="img/sprite.svg#webcam"></use>
+                          </svg>
+                        </div>
+                        <div class="rating-block__bottom">
+                          <div class="rating-block__left">
+                            <span class="rating-block__percent">80%</span>
+                            <svg class="rating-block__arrow rating-block__arrow--green">
+                              <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__right"><span class="rating-block__mark">16</span>/20</div>
+                        </div>
+                      </li>
+                      <li class="statistics-block__item rating-block">
+                        <div class="rating-block__top">
+                          <h3 class="rating-block__title">Відвідуваність на онлайн уроках</h3>
+                          <svg class="rating-block__icon">
+                            <use xlink:href="img/sprite.svg#webcam"></use>
+                          </svg>
+                        </div>
+                        <div class="rating-block__bottom">
+                          <div class="rating-block__left">
+                            <span class="rating-block__percent">80%</span>
+                            <svg class="rating-block__arrow rating-block__arrow--green">
+                              <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__right"><span class="rating-block__mark">16</span>/20</div>
+                        </div>
+                      </li>
+                      <li class="statistics-block__item rating-block">
+                        <div class="rating-block__top">
+                          <h3 class="rating-block__title">Середня прогнозована оцінка</h3>
+                          <svg class="rating-block__icon">
+                            <use xlink:href="img/sprite.svg#statistics"></use>
+                          </svg>
+                        </div>
+                        <div class="rating-block__bottom">
+                          <div class="rating-block__left">
+                            <span class="rating-block__percent">80%</span>
+                            <svg class="rating-block__arrow rating-block__arrow--red">
+                              <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__right"><span class="rating-block__mark">9</span>/10</div>
+                        </div>
+                      </li>
+                      <li class="statistics-block__item rating-block">
+                        <div class="rating-block__top">
+                          <h3 class="rating-block__title">Відвідуваність на онлайн уроках</h3>
+                          <svg class="rating-block__icon">
+                            <use xlink:href="img/sprite.svg#webcam"></use>
+                          </svg>
+                        </div>
+                        <div class="rating-block__bottom">
+                          <div class="rating-block__left">
+                            <span class="rating-block__percent">80%</span>
+                            <svg class="rating-block__arrow rating-block__arrow--green">
+                              <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__right"><span class="rating-block__mark">16</span>/20</div>
+                        </div>
+                      </li>
+                      <li class="statistics-block__item rating-block">
+                        <div class="rating-block__top">
+                          <h3 class="rating-block__title">Середня прогнозована оцінка</h3>
+                          <svg class="rating-block__icon">
+                            <use xlink:href="img/sprite.svg#statistics"></use>
+                          </svg>
+                        </div>
+                        <div class="rating-block__bottom">
+                          <div class="rating-block__left">
+                            <span class="rating-block__percent">80%</span>
+                            <svg class="rating-block__arrow rating-block__arrow--green">
+                              <use xlink:href="img/sprite.svg#arrow-up-outline"></use>
+                            </svg>
+                          </div>
+                          <div class="rating-block__right"><span class="rating-block__mark">9</span>/10</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- tab 2 -->
+            <div class="graph" data-tab-content="Прогнозована оцінка">
+              <div class="graph__inner">
+                <div class="graph__top">
+                  <div class="graph__left">
+                    <h2 class="graph__title">Прогнозована оцінка по предметам</h2>
+                    <div class="graph__content-tabs content-tabs content-tabs--small">
+                      <div class="content-tabs__wrapper">
+                        <ul class="content-tabs__list">
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn content-tabs__btn--active" data-tab="І семестр">
+                              І семестр
+                            </button>
+                          </li>
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn" data-tab="ІІ семестр">ІІ семестр</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="graph__bottom">
+                  <canvas id="graph"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- tab 3 -->
+            <div class="marks-table" data-tab-content="Всі оцінки">
+              <div class="marks-table__inner">
+                <div class="marks-table__top">
+                  <div class="marks-table__left">
+                    <h2 class="marks-table__title">Всі оцінки</h2>
+                    <div class="marks-table__content-tabs content-tabs content-tabs--small">
+                      <div class="content-tabs__wrapper">
+                        <ul class="content-tabs__list">
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn content-tabs__btn--active" data-tab="І семестр">
+                              І семестр
+                            </button>
+                          </li>
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn" data-tab="ІІ семестр">ІІ семестр</button>
+                          </li>
+                          <li class="content-tabs__item">
+                            <button class="content-tabs__btn" data-tab="Табель">Табель</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="marks-table__bottom">
+                  <div class="marks-table__lesson lesson-modal lesson-modal--hide">
+                    <div class="lesson-modal__content">
+                      <div class="lesson-modal__top">
+                        <div class="lesson-modal__head">
+                          <div class="lesson-modal__num">
+                            <span>10</span>
+                            — оцінка за урок
+                          </div>
+                          <time class="lesson-modal__date"> 25 квітня, 9:00 </time>
+                        </div>
+                        <div class="lesson-modal__subject">
+                          <a href="#" class="lesson-modal__name">Всесвітня історія</a>
+                        </div>
+                        <a href="#" class="lesson-modal__teacher teacher">
+                          <div class="teacher__img">
+                            <img src="https://picsum.photos/200/300" alt="" />
+                          </div>
+                          Бондар Олег Михайлович
+                        </a>
+                      </div>
+                      <div class="lesson-modal__bottom">
+                        <div class="lesson-modal__image">
+                          <span class="lesson-modal__mark">10, 8</span>
+                          <img src="https://picsum.photos/200/300?random=1" alt="" />
+                        </div>
+
+                        <div class="lesson-modal__text">
+                          <a href="#">
+                            Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                          </a>
+                        </div>
+                      </div>
+                      <div class="lesson-modal__buttons">
+                        <a href="#" class="lesson-modal__link btn btn--trans">
+                          перейти до уроку
+                          <svg class="btn__icon">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="marks-table__table table" data-tab-table="І семестр">
+                    <div class="table__wrapper">
+                      <div class="table__head">
+                        <div class="table__row">
+                          <div class="table__th table__th--subjects">Предмети</div>
+                          <div class="table__th table__th--marks">Оцінки</div>
+                          <div class="table__th table__th--semester">За семестр</div>
+                        </div>
+                      </div>
+                      <div class="table__body">
+                        <div class="table__row">
+                          <div class="table__subject">Алгебра <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total table__total--forecast" data-tippy-content="Прогнозована оцінка">
+                            11
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Геометрія <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Біологія <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Хімія <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Англійська мова <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізична культура<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Мистецтво <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Географія <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Історія України <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">2</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">9</li>
+                            <li class="table__mark">5</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Всесвітня історія <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізика <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Українська мова <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">
+                            Українська література <span class="table__text">СЕМЕСТР</span>
+                          </div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">
+                            Зарубіжна література <span class="table__text">СЕМЕСТР</span>
+                          </div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Інформатика <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total" data-tippy-content="Оцінка за семестр">11</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table__legend">
+                      <span class="table__legend-text">ЛЕГЕНДА ОЦІНОК:</span>
+                      <ul class="table__list">
+                        <li class="table__item">
+                          <div class="table__mark">10</div>
+                          <div class="table__tip">- за урок, д/з, додаткова</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__mark table__mark--control-work">10</div>
+                          <div class="table__tip">- за к/р</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__mark table__mark--thematic">10</div>
+                          <div class="table__tip">- за тему</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__total table__total--forecast">10</div>
+                          <div class="table__tip">- прогноз за семестр</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__total">10</div>
+                          <div class="table__tip">- поставлена за семестр</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="marks-table__table table" data-tab-table="ІІ семестр">
+                    <div class="table__wrapper">
+                      <div class="table__head">
+                        <div class="table__row">
+                          <div class="table__th table__th--subjects">Предмети</div>
+                          <div class="table__th table__th--marks">Оцінки</div>
+                          <div class="table__th table__th--semester">За семестр</div>
+                        </div>
+                      </div>
+                      <div class="table__body">
+                        <div class="table__row">
+                          <div class="table__subject">Алгебра <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                          </ul>
+                          <div class="table__total table__total--forecast">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Геометрія<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Біологія<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Хімія<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Англійська мова<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізична культура<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Мистецтво<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Географія<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Історія України<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">2</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">9</li>
+                            <li class="table__mark">5</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Всесвітня історія<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізика<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Українська мова<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">
+                            Українська література<span class="table__text">СЕМЕСТР</span>
+                          </div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Зарубіжна література<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Інформатика<span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__mark">10</li>
+                            <li class="table__mark table__mark--control-work">10</li>
+                            <li class="table__mark table__mark--thematic">10</li>
+                            <li class="table__mark">10</li>
+                          </ul>
+                          <div class="table__total">11</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table__legend">
+                      <span class="table__legend-text">ЛЕГЕНДА ОЦІНОК:</span>
+                      <ul class="table__list">
+                        <li class="table__item">
+                          <div class="table__mark">10</div>
+                          <div class="table__tip">- за урок, д/з, додаткова</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__mark table__mark--control-work">10</div>
+                          <div class="table__tip">- за к/р</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__mark table__mark--thematic">10</div>
+                          <div class="table__tip">- за тему</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__total table__total--forecast">10</div>
+                          <div class="table__tip">- прогноз за семестр</div>
+                        </li>
+                        <li class="table__item">
+                          <div class="table__total">10</div>
+                          <div class="table__tip">- поставлена за семестр</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="marks-table__table table table--timesheet" data-tab-table="Табель">
+                    <div class="table__wrapper">
+                      <div class="table__head">
+                        <div class="table__row">
+                          <div class="table__th table__th--subjects">Предмети</div>
+                          <div class="table__th table__th--marks">І семестр</div>
+                          <div class="table__th table__th--marks">ІІ семестр</div>
+                          <div class="table__th table__th--semester">
+                            Прогноз <br />
+                            річної
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table__body">
+                        <div class="table__row">
+                          <div class="table__subject">Алгебра <span class="table__text">СЕМЕСТР</span></div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Геометрія</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Біологія</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Хімія</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Англійська мова</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізична культура</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Мистецтво</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Географія</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Історія України</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Всесвітня історія</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Фізика</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Українська мова</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Українська література</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Зарубіжна література</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                        <div class="table__row">
+                          <div class="table__subject">Інформатика</div>
+                          <ul class="table__marks">
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                            <li class="table__semester">
+                              <span class="table__info">І семестр</span>
+                              <span class="table__num">10</span>
+                            </li>
+                          </ul>
+                          <div class="table__total">
+                            <span class="table__info">Річна</span>
+                            <span class="table__num table__num--accent">10</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

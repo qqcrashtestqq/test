@@ -1,0 +1,20 @@
+<svg width="205" height="146" viewBox="0 0 205 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_704_9917" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="205" height="146">
+<rect x="0.5" y="0.5" width="204" height="145" rx="4.5" fill="#EB5757" stroke="#EB5757"/>
+</mask>
+<g mask="url(#mask0_704_9917)">
+<rect width="277.216" height="221.739" transform="matrix(0.707107 0.707107 0.707107 -0.707107 -92.251 68.5732)" fill="#F2F2F2"/>
+</g>
+<mask id="mask1_704_9917" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="153" y="0" width="52" height="52">
+<path d="M205 52H158C155.239 52 153 49.7614 153 47V0H205V52Z" fill="#E0E0E0"/>
+</mask>
+<g mask="url(#mask1_704_9917)">
+<rect x="252.193" y="181.485" width="277.216" height="58.3578" rx="5" transform="rotate(-135 252.193 181.485)" fill="#E0E0E0"/>
+</g>
+<mask id="mask2_704_9917" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="205" height="146">
+<rect x="0.5" y="0.5" width="204" height="145" rx="4.5" stroke="#EB5757"/>
+</mask>
+<g mask="url(#mask2_704_9917)">
+<rect x="0.707107" width="276.216" height="220.739" transform="matrix(0.707107 0.707107 0.707107 -0.707107 -92.0439 68.0732)" fill="#EB5757" stroke="#EB5757"/>
+</g>
+</svg>

@@ -1,0 +1,57 @@
+.statistics {
+  &__inner {
+    display: flex;
+    gap: rem(30);
+  }
+
+  &--big {
+    margin-bottom: rem(40);
+
+    .statistics-block__list {
+      grid-template-columns: repeat(4, 1fr);
+
+      // grid-template-columns: repeat(auto-fit, minmax(rem(208), 1fr));
+    }
+
+    .statistics-block__item:nth-child(n + 3) {
+      display: flex;
+    }
+  }
+}
+
+@include mq('xl') {
+  .statistics {
+    &__inner {
+      gap: rem(15);
+    }
+
+    &--big {
+      .statistics-block__list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .statistics-block__item {
+        flex: 1 1 40%;
+      }
+    }
+  }
+}
+
+@include mq('lg') {
+  .statistics {
+    &__block {
+      display: none;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &--big {
+      .statistics-block__list {
+        flex-direction: column;
+      }
+    }
+  }
+}

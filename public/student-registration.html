@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<!-- favicon -->
+
+<link rel="stylesheet" href="css/main.min.css">
+
+<script src="js/main.js" defer="defer"></script>
+<title>Реєстрація учня</title>
+
+    <meta property="og:title" content="Title">
+    <meta property="og:url" content="url">
+    <meta property="og:image" content="img/favicon/favicon.svg">
+  </head>
+  <body>
+    <div class="auth-layout">
+      <aside class="aside aside--static">
+        <div class="aside__wrapper">
+          <div class="aside__top">
+            <a href="#" class="aside__logo">
+              <svg class="aside__top-svg" width="72" height="28" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="aside__top-path" d="M13.3477 1.63601H17.6531V14.8604C17.6531 16.3453 17.2984 17.6445 16.5891 18.7582C15.8865 19.8718 14.9021 20.7402 13.636 21.3633C12.3699 21.9798 10.895 22.288 9.21129 22.288C7.52095 22.288 6.04273 21.9798 4.77663 21.3633C3.51054 20.7402 2.52616 19.8718 1.82351 18.7582C1.12086 17.6445 0.769531 16.3453 0.769531 14.8604V1.63601H5.07493V14.4925C5.07493 15.2681 5.24396 15.9575 5.58203 16.5607C5.92673 17.1639 6.41063 17.6379 7.03374 17.9826C7.65684 18.3273 8.38269 18.4996 9.21129 18.4996C10.0465 18.4996 10.7724 18.3273 11.3889 17.9826C12.012 17.6379 12.4925 17.1639 12.8306 16.5607C13.1753 15.9575 13.3477 15.2681 13.3477 14.4925V1.63601Z" fill="#4F4F4F"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="auth-header">
+          <div class="auth-header__container auth-container">
+            <div class="auth-header__inner">
+              <svg class="auth-header__inner-svg">
+                <use xlink:href="img/sprite.svg#account"></use>
+              </svg>
+              <h1 class="auth-header__title">Реєстрація учня</h1>
+            </div>
+          </div>
+        </header>
+
+        <div class="auth-content">
+          <div class="auth-content__container auth-container">
+            <div class="auth-content__top">
+              <ul class="auth-content__list">
+                <li class="auth-content__item">
+                  <a href="register-parents.html" class="auth-content__link">Реєстрація батьків</a>
+                </li>
+                <li class="auth-content__item">
+                  <a href="student-registration.html" class="auth-content__link auth-content__link--active">Реєстрація учнів</a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="auth-content__main">
+              <!-- auth-content__new-user--includes - если нажали на кнопку и добавились поля -->
+
+              <div class="auth-content__new-user">
+                <div class="auth-content__up">
+                  <h2 class="auth-content__title">Учень № 1</h2>
+                </div>
+                <!-- new user start -->
+                <div class="auth-content__user">
+                  <div class="auth-content__wrapper">
+                    <div class="auth-content__avatar load-avatar">
+                      <label for="new-avatar-user" class="load-avatar__label">
+                        <div class="load-avatar__image">
+                          <svg class="load-avatar__image-svg">
+                            <use xlink:href="img/sprite.svg#avatar-image"></use>
+                          </svg>
+                        </div>
+                        <span class="load-avatar__add">Додати фото</span>
+                        <input type="file" id="new-avatar-user" hidden accept="image/png, image/jpeg">
+                      </label>
+                      <div class="load-avatar__warn">
+                        <div class="load-avatar__top">
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                          Увага!
+                        </div>
+                        <div class="load-avatar__text">Фото можна змінити тільки раз на рік</div>
+                      </div>
+                    </div>
+                    <div class="auth-content__grid">
+                      <!-- name -->
+                      <div class="auth-content__field field">
+                        <label class="field__label" for="form[name]">Ім’я</label>
+                        <div class="field__wrapper">
+                          <input type="text" id="form[name]" class="field__input input" placeholder="Ім’я" data-input required>
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <!-- surname -->
+                      <div class="auth-content__field field">
+                        <label class="field__label" for="form[surname]">Прізвище</label>
+                        <div class="field__wrapper">
+                          <input type="text" id="form[surname]" class="field__input input input--error" placeholder="Прізвище " data-input required>
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                        </div>
+                        <span class="field__error">Була допущена помилка </span>
+                      </div>
+
+                      <!-- middle name -->
+                      <div class="auth-content__field field">
+                        <label class="field__label" for="form[middle-name]">По-батькові</label>
+                        <div class="field__wrapper">
+                          <input type="text" id="form[middle-name]" class="field__input input" placeholder="По-батькові" data-input required>
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <!-- Date of birth -->
+                      <div class="auth-content__field field">
+                        <span class="field__label">Дата народження</span>
+                        <ul class="field__selects"></ul>
+                      </div>
+
+                      <!-- Sex -->
+                      <div class="auth-content__field field">
+                        <label class="field__label">Стать</label>
+                        <ul class="field__radios">
+                          <li class="field__radio">
+                            <label class="radio">
+                              <input type="radio" class="radio__input" name="sex" checked="checked">
+
+                              <div class="radio__border"></div>
+                              <div class="radio__block">
+                                <span class="radio__checkmark radio__checkmark--default">
+                                  <svg>
+                                    <use xlink:href="img/sprite.svg#radio-default"></use>
+                                  </svg>
+                                </span>
+                                <span class="radio__checkmark radio__checkmark--active">
+                                  <svg>
+                                    <use xlink:href="img/sprite.svg#radio-active"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                              <span class="radio__text">чоловік</span>
+                            </label>
+                          </li>
+                          <li class="field__radio">
+                            <label class="radio">
+                              <input type="radio" class="radio__input" name="sex">
+
+                              <div class="radio__border"></div>
+                              <div class="radio__block">
+                                <span class="radio__checkmark radio__checkmark--default">
+                                  <svg>
+                                    <use xlink:href="img/sprite.svg#radio-default"></use>
+                                  </svg>
+                                </span>
+                                <span class="radio__checkmark radio__checkmark--active">
+                                  <svg>
+                                    <use xlink:href="img/sprite.svg#radio-active"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                              <span class="radio__text">жінка</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- The degree of kinship with respect to the student -->
+                      <div class="auth-content__field field">
+                        <label class="field__label">Ступінь споріднення відносно учня</label>
+                        <div class="field__select select">
+                          <div class="select__top">
+                            <span class="select__value">виберіть вашу ступінь</span>
+                            <svg class="select__top-svg">
+                              <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+                            </svg>
+                          </div>
+                          <div class="select__bottom">
+                            <div class="select__wrapper">
+                              <ul class="select__list" data-simplebar>
+                                <li class="select__item select__item--chosen">Батько</li>
+                                <li class="select__item">Мати</li>
+                                <li class="select__item">Бабуся</li>
+                                <li class="select__item">Дідусь</li>
+                                <li class="select__item">Сестра</li>
+                                <li class="select__item">Брат</li>
+                                <li class="select__item">Брат</li>
+                                <li class="select__item">Брат</li>
+                                <li class="select__item">Брат</li>
+                                <li class="select__item">Брат</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- mobile phone -->
+                      <div class="auth-content__field field">
+                        <label class="field__label" for="form[phone]">Телефон</label>
+                        <div class="field__wrapper">
+                          <input type="tel" id="form[phone]" class="field__input input" placeholder="+38 (0__) ___ ___ __" inputmode="tel" data-input required>
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <!-- email -->
+                      <div class="auth-content__field field">
+                        <label class="field__label" for="form[email]">Пошта</label>
+                        <div class="field__wrapper">
+                          <input type="email" id="form[email]" class="field__input input" placeholder="DSD@gmail.com" inputmode="tel" value="DSD@gmail.com" data-input disabled="disabled">
+                          <svg class="field__icon">
+                            <use xlink:href="img/sprite.svg#warn"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="auth-content__block">
+                      <h2 class="auth-content__title">Адреса проживання</h2>
+                      <div class="auth-content__grid">
+                        <!-- country -->
+                        <div class="auth-content__field field">
+                          <label class="field__label" for="form[country]">Місто</label>
+                          <div class="field__wrapper">
+                            <input type="text" id="form[country]" class="field__input input" placeholder="введіть назву міста" data-input required>
+                            <svg class="field__icon">
+                              <use xlink:href="img/sprite.svg#warn"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- address -->
+                        <div class="auth-content__field field">
+                          <label class="field__label" for="form[address]">Адреса</label>
+                          <div class="field__wrapper">
+                            <input type="text" id="form[address]" class="field__input input" placeholder="введіть вашу адресу" data-input required>
+                            <svg class="field__icon">
+                              <use xlink:href="img/sprite.svg#warn"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="auth-content__block">
+                      <h2 class="auth-content__title">Скани документів</h2>
+                      <div class="auth-content__grid auth-content__grid--mb-60">
+                        <div class="auth-content__document document-block">
+                          <div class="document-block__top">
+                            <h3 class="document-block__title">Свідоцтво про народження</h3>
+                          </div>
+                          <label for="passport" class="document-block__label">
+                            <div class="btn btn--trans">
+                              <svg class="btn__icon">
+                                <use xlink:href="img/sprite.svg#download"></use>
+                              </svg>
+                              Завантажити
+                            </div>
+                            <input type="file" id="passport" accept="image/png, image/jpeg" hidden="">
+                          </label>
+                          <ul class="document-block__list">
+                            <li class="document-block__item document">
+                              <div class="document__wrapper">
+                                <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#remove"></use>
+                                  </svg>
+                                </button>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Фото_27.04.2023</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                            </li>
+                            <li class="document-block__item document document--error">
+                              <div class="document__wrapper">
+                                <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#remove"></use>
+                                  </svg>
+                                </button>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, earum?</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                              <div class="document__error">
+                                <svg class="document__error-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                Завантажте ще раз
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="auth-content__document document-block">
+                          <div class="document-block__top">
+                            <h3 class="document-block__title">Медична карта</h3>
+                          </div>
+                          <label for="id" class="document-block__label">
+                            <div class="btn btn--trans">
+                              <svg class="btn__icon">
+                                <use xlink:href="img/sprite.svg#download"></use>
+                              </svg>
+                              Завантажити
+                            </div>
+                            <input type="file" id="id" accept="image/png, image/jpeg" hidden="">
+                          </label>
+                          <ul class="document-block__list">
+                            <li class="document-block__item document">
+                              <div class="document__wrapper">
+                                <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#remove"></use>
+                                  </svg>
+                                </button>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Фото_27.04.2023</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="auth-content__document document-block">
+                          <div class="document-block__top">
+                            <h3 class="document-block__title">Інші документи</h3>
+                          </div>
+                          <label for="affinity" class="document-block__label">
+                            <div class="btn btn--trans">
+                              <svg class="btn__icon">
+                                <use xlink:href="img/sprite.svg#download"></use>
+                              </svg>
+                              Завантажити
+                            </div>
+                            <input type="file" id="affinity" accept="image/png, image/jpeg" hidden="">
+                          </label>
+                          <ul class="document-block__list">
+                            <li class="document-block__item document">
+                              <div class="document__wrapper">
+                                <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#remove"></use>
+                                  </svg>
+                                </button>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Фото_27.04.2023</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="auth-content__document document-block document-block--comment">
+                          <div class="document-block__top">
+                            <h3 class="document-block__title">
+                              Додаткова інформація про стан здоров’я дитини (за потреби)
+                            </h3>
+                          </div>
+
+                          <textarea class="document-block__input input input--textarea" placeholder="Повідомлення" data-input></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="auth-content__block">
+                      <h2 class="auth-content__title">Коментар батьків</h2>
+                      <div class="auth-content__grid auth-content__grid--mb-0">
+                        <div class="auth-content__document document-block document-block--comment">
+                          <div class="document-block__top">
+                            <h3 class="document-block__title">Коментар</h3>
+                          </div>
+
+                          <textarea class="document-block__input input input--textarea" placeholder="Повідомлення" data-input></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- new user end -->
+              </div>
+
+              <div class="auth-content__new-user">
+                <div class="auth-content__up">
+                  <h2 class="auth-content__title">Учень № 2</h2>
+                  <button class="auth-content__add" type="button" aria-label="Додати другу контактну особу" aria-expanded="false">
+                    <svg class="auth-content__add-svg">
+                      <use xlink:href="img/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="auth-content__add-svg auth-content__add-svg--remove">
+                      <use xlink:href="img/sprite.svg#remove"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="auth-content__next">
+                <label class="auth-content__checkbox checkbox">
+                  <input type="checkbox" value="" class="checkbox__input">
+                  <div class="checkbox__block">
+                    <span class="checkbox__checkmark checkbox__checkmark--default">
+                      <svg><use xlink:href="img/sprite.svg#checkbox-default"></use></svg>
+                    </span>
+                    <span class="checkbox__checkmark checkbox__checkmark--active">
+                      <svg><use xlink:href="img/sprite.svg#checkbox-active"></use></svg>
+                    </span>
+                  </div>
+                  <span class="checkbox__value">
+                    Я погоджуюсь з політикою конфіденційності, та даю згоду на обробку моїх данних</span>
+                </label>
+
+                <div class="auth-content__buttons">
+                  <button class="auth-content__btn auth-content__btn--back btn btn--trans" type="button">
+                    <svg class="btn__icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                    назад
+                  </button>
+                  <button class="auth-content__btn btn btn--accent" type="button">
+                    Завершити реєстрацію
+                    <svg class="btn__icon">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+  <div class="footer__inner">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a href="#" class="footer__link">
+          <svg class="footer__link-svg footer__link-svg--stroke">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          Про Unity
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">
+          <svg class="footer__link-svg">
+            <use xlink:href="img/sprite.svg#play"></use>
+          </svg>
+          Відео-інструкція
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">
+          <svg class="footer__link-svg">
+            <use xlink:href="img/sprite.svg#ask"></use>
+          </svg>
+          Питання-відповіді
+        </a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.4804 7.67981L4.44043 12.5398L9.30043 14.1598M18.4804 7.67981L9.30043 14.1598M18.4804 7.67981L14.1604 19.0198L9.30043 14.1598" stroke="#A6C0FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.0002 22.7999C17.965 22.7999 22.8002 17.9648 22.8002 12C22.8002 6.03511 17.965 1.19995 12.0002 1.19995C6.03536 1.19995 1.2002 6.03511 1.2002 12C1.2002 17.9648 6.03536 22.7999 12.0002 22.7999Z" stroke="#A6C0FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          Написати в месенджер
+        </a>
+      </li>
+    </ul>
+    <a href="tel:380682552522" class="footer__link footer__link--last">
+      <svg class="footer__link-svg">
+        <use xlink:href="img/sprite.svg#phone"></use>
+      </svg>
+      +38 068 255 25 22</a>
+  </div>
+</footer>
+
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<div class="modal modal--big upload">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__main">
+        <button class="modal__close">
+          <svg class="modal__close-svg">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal__title">Завантаження документа</h2>
+
+        <div class="modal__wrapper">
+          <form class="modal__from">
+            <div class="modal__upload">
+              <svg class="modal__upload-svg">
+                <use xlink:href="img/sprite.svg#upload"></use>
+              </svg>
+              <div class="modal__drop">
+                <span
+                  >Перетягніть <br />
+                  або</span
+                >
+                <label for="upload-files">
+                  оберіть файл
+                  <input type="file" id="upload-files" hidden />
+                </label>
+              </div>
+            </div>
+            <div class="modal__case" data-simplebar>
+              <ul class="modal__documents">
+                <li class="document-block__item document document--error">
+                  <div class="document__wrapper">
+                    <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                      <svg class="document__remove-svg">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </button>
+                    <svg class="document__image">
+                      <use xlink:href="img/sprite.svg#avatar-image"></use>
+                    </svg>
+                    <span class="document__title"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, earum?</span
+                    >
+                    <small class="document__weight">12 mb</small>
+                  </div>
+                  <div class="document__error">
+                    <svg class="document__error-icon">
+                      <use xlink:href="img/sprite.svg#warn"></use>
+                    </svg>
+
+                    Завантажте ще&nbsp;раз
+                  </div>
+                </li>
+                <li class="modal__document document">
+                  <div class="document__wrapper">
+                    <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                      <svg class="document__remove-svg">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </button>
+                    <svg class="document__image">
+                      <use xlink:href="img/sprite.svg#avatar-image"></use>
+                    </svg>
+                    <span class="document__title">Фото_27.04.2023</span>
+                    <small class="document__weight">12 mb</small>
+
+                    <div class="document__progress progress">
+                      <span class="progress-line">
+                        <span style="width: 80%"></span>
+                      </span>
+                      80%
+                    </div>
+                  </div>
+                </li>
+                <li class="modal__document document">
+                  <div class="document__wrapper">
+                    <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                      <svg class="document__remove-svg">
+                        <use xlink:href="img/sprite.svg#remove"></use>
+                      </svg>
+                    </button>
+                    <svg class="document__image">
+                      <use xlink:href="img/sprite.svg#avatar-image"></use>
+                    </svg>
+                    <span class="document__title">Фото_27.04.2023</span>
+                    <small class="document__weight">12 mb</small>
+                    <div class="document__progress progress">
+                      <span class="progress-line">
+                        <span style="width: 80%"></span>
+                      </span>
+                      80%
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button class="modal__btn btn btn--accent">Відправити на перевірку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

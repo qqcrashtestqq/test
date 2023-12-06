@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Урок з математики '})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="lesson-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header header--lesson">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <div class="header__lesson">
+                  <a href="#" class="header__back">
+                    <svg class="header__back-svg">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                  <button class="header__manual">
+                    <svg class="header__manual-svg">
+                      <use xlink:href="img/sprite.svg#list"></use>
+                    </svg>
+                  </button>
+                  <h2 class="header__title">Урок з математики</h2>
+                </div>
+                <div class="header__go">
+                  <button class="header__link btn btn--accent">
+                    <svg class="btn__icon">
+                      <use xlink:href="img/sprite.svg#webcam"></use>
+                    </svg>
+                    Перейти до уроку
+                  </button>
+
+                  <time class="header__date" datetime="25 квітня, 9:00">25 квітня, 9:00</time>
+                </div>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="content__container container">
+            <section class="lesson-section">
+              <div class="lesson-section__inner">
+                <div class="lesson-section__theme theme-card theme-card--purple">
+                  <div class="theme-card__inner">
+                    <div class="theme-card__top">Тема: Множини і операції над ними</div>
+                    <h1 class="theme-card__title">
+                      Тема уроку: Числові множини. Взаємно однозначна відповідність між елементами множин.
+                    </h1>
+                    <svg class="theme-card__icon">
+                      <use xlink:href="img/sprite.svg#math"></use>
+                    </svg>
+                  </div>
+                  <button class="theme-card__more" aria-expanded="false" aria-label="Відкрити інформацію про предмет">
+                    <svg class="theme-card__more-svg">
+                      <use xlink:href="img/sprite.svg#arrow-down-mini"></use>
+                    </svg>
+                  </button>
+                  <div class="theme-card__info"></div>
+                </div>
+                <div class="lesson-section__right">
+                  <div class="lesson-section__container">
+                    <div class="lesson-section__teacher teacher-card">
+                      <div class="teacher-card__top">
+                        <div class="teacher-card__image">
+                          <img src="https://picsum.photos/200/300" alt="" />
+                        </div>
+                        <div class="teacher-card__info">
+                          <div class="teacher-card__name">Кайдаш Людмила Миколаївна</div>
+                          <div class="teacher-card__status">Викладач математики, Класний керівник</div>
+                        </div>
+                      </div>
+                      <button class="teacher-card__question">
+                        <svg class="teacher-card__question-svg">
+                          <use xlink:href="img/sprite.svg#chat"></use>
+                        </svg>
+                        Задати питання
+                      </button>
+                    </div>
+                    <!-- todo-block--done - если все задания выполнены -->
+                    <div class="lesson-section__todo todo-block">
+                      <div class="todo-block__inner">
+                        <h2 class="todo-block__title">TO DO:</h2>
+                        <ul class="todo-block__list">
+                          <li class="todo-block__item todo-block__item--done">
+                            <div class="todo-block__icon">
+                              <svg class="todo-block__icon-svg">
+                                <use xlink:href="img/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+
+                            Прослухати онлайн-урок
+                          </li>
+                          <li class="todo-block__item">
+                            <div class="todo-block__icon">
+                              <svg class="todo-block__icon-svg">
+                                <use xlink:href="img/sprite.svg#webcam"></use>
+                              </svg>
+                            </div>
+                            Прослухати онлайн-урок
+                          </li>
+                          <li class="todo-block__item">
+                            <div class="todo-block__icon">
+                              <svg class="todo-block__icon-svg">
+                                <use xlink:href="img/sprite.svg#home"></use>
+                              </svg>
+                            </div>
+
+                            Здати домашню роботу
+                          </li>
+                          <li class="todo-block__item">
+                            <div class="todo-block__icon">
+                              <svg class="todo-block__icon-svg">
+                                <use xlink:href="img/sprite.svg#pen"></use>
+                              </svg>
+                            </div>
+                            Написати контрольну роботу
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="lesson-section__marks marks">
+                      <h2 class="marks__title">Оцінки:</h2>
+                      <ul class="marks__list">
+                        <li class="marks__item"><span>10</span>- за урок</li>
+                        <li class="marks__item"><span>3</span>- домашня робота</li>
+                        <li class="marks__item"><span>5</span>- контрольна робота</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="lesson-section__back" id="btn-up">
+                    <svg class="lesson-section__back-svg">
+                      <use xlink:href="img/sprite.svg#arrow-up"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="lesson-section__content">
+                  <div class="lesson-section__content-tabs content-tabs content-tabs--big">
+                    <div class="content-tabs__wrapper">
+                      <ul class="content-tabs__list">
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Конспект">Конспект</button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn content-tabs__btn--active" data-tab="Домашня робота">
+                            Домашня робота
+                          </button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Контрольна робота">Контрольна робота</button>
+                        </li>
+                        <li class="content-tabs__item">
+                          <button class="content-tabs__btn" data-tab="Додатково">Додатково</button>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="content-tabs__print">
+                      <svg class="content-tabs__print-svg">
+                        <use xlink:href="img/sprite.svg#print"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="lesson-section__blocks">
+                    <div class="lesson-section__block" data-tab-content="Конспект">
+                      <div class="lesson-section__info">
+                        <div class="lesson-section__text">
+                          <h2>Числові множини</h2>
+                          <h3>Подивіться відео</h3>
+                          <div class="iframe-wrapper">
+                            <iframe
+                              src="https://www.youtube.com/embed/n-PfWFmjYAw"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                          <div class="text-wrapp">
+                            <p>
+                              Всі числа можна віднести до тієї чи іншої групи, об’єднуючи їх за певними ознаками та
+                              властивостями. <br />
+                              Найпростішою та найзрозумілішою множиною чисел є натуральні числа.
+                            </p>
+                            <img src="img/static/formula.jpg" alt="" />
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <h2>Взаємно однозначна відповідність між елементами множин</h2>
+
+                            <p>
+                              Всі числа можна віднести до тієї чи іншої групи, об’єднуючи їх за певними ознаками та
+                              властивостями. <br />Найпростішою та найзрозумілішою множиною чисел є натуральні числа.
+                            </p>
+                            <img src="img/static/formula-2.jpg" alt="" />
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <h2>Взаємно однозначна відповідність між елементами множин</h2>
+
+                            <p>
+                              Всі числа можна віднести до тієї чи іншої групи, об’єднуючи їх за певними ознаками та
+                              властивостями. <br />Найпростішою та найзрозумілішою множиною чисел є натуральні числа.
+                            </p>
+                            <img src="img/static/formula-2.jpg" alt="" />
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                            <h3>Означення</h3>
+                            <div class="definition">
+                              <strong>Натуральнi числа</strong> — це числа, якi виникають природним чином при лiчбi
+                              предметiв.
+                            </div>
+                            <p>
+                              Наприклад: 1,2,3,4…<br />
+                              Числовi множини прийнято позначати латинськими великими лiтерами. <br />
+                              Множину натуральних чисел позначають знаком N.<br />
+                            </p>
+                          </div>
+                          <div class="lesson-section__pagination pagination">
+                            <ul class="pagination__list">
+                              <li class="pagination__item">
+                                <a href="#" class="pagination__link pagination__link--active">1</a>
+                              </li>
+                              <li class="pagination__item"><a href="/?_page=2" class="pagination__link">2</a></li>
+                              <li class="pagination__item"><a href="/?_page=3" class="pagination__link">3</a></li>
+                              <li class="pagination__item"><a href="/?_page=4" class="pagination__link">4</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="lesson-section__section">
+                        <h2 class="lesson-section__title">Матеріали уроку:</h2>
+                        <div class="lesson-section__document-block document-block">
+                          <ul class="document-block__list">
+                            <li class="document-block__item document">
+                              <div class="document__wrapper">
+                                <a
+                                  href="#"
+                                  class="document__remove"
+                                  type="button"
+                                  aria-label="Завантажити цей документ"
+                                  download
+                                >
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#download-file"></use>
+                                  </svg>
+                                </a>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Презентація уроку 2</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                            </li>
+                            <li class="document-block__item document">
+                              <div class="document__wrapper">
+                                <a
+                                  href="#"
+                                  class="document__remove"
+                                  type="button"
+                                  aria-label="Завантажити цей документ"
+                                  download
+                                >
+                                  <svg class="document__remove-svg">
+                                    <use xlink:href="img/sprite.svg#download-file"></use>
+                                  </svg>
+                                </a>
+                                <svg class="document__image">
+                                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                </svg>
+                                <span class="document__title">Презентація уроку 2</span>
+                                <small class="document__weight">12 mb</small>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="lesson-section__section">
+                        <h2 class="lesson-section__title">Посилання:</h2>
+                        <ul class="lesson-section__links">
+                          <li class="lesson-section__unit">
+                            <a href="#" class="lesson-section__link">
+                              <svg><use xlink:href="img/sprite.svg#link"></use></svg>
+                              <span> https://www.houseofmath.com/uk/flk; lfkjq ;kl ; k;</span>
+                            </a>
+                            <p class="lesson-section__description">
+                              Множини чисел так вiдносяться одна до одної: множина натуральних чисел ℕ включена до
+                              множини цiлих чисел ℤ.
+                            </p>
+                          </li>
+                          <li class="lesson-section__unit">
+                            <a href="#" class="lesson-section__link">
+                              <svg><use xlink:href="img/sprite.svg#link"></use></svg>
+                              <span> https://uk.economy-pedia.com/11040408-numeric-sets</span>
+                            </a>
+                            <p class="lesson-section__description">
+                              Множини чисел так вiдносяться одна до одної: множина натуральних чисел ℕ включена до
+                              множини цiлих чисел ℤ, яка, своєю чергою, включена до множини рацiональних чисел ℚ, а та,
+                              нарештi, включена до множини дiйсних чисел ℝ.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="#" class="lesson-section__next btn btn--trans"
+                        >Перейти до наступного уроку
+                        <svg class="btn__icon">
+                          <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="lesson-section__block" data-tab-content="Домашня робота">
+                      <div class="lesson-section__deadline">
+                        Дедлайн:
+                        <div class="lesson-section__date date date--blue">26.04 16:00</div>
+                      </div>
+                      <div class="lesson-section__info">
+                        <div class="lesson-section__text">
+                          <div class="text-wrapp">
+                            <h2>Ознайомтесь з домашнім завданням</h2>
+                            <p>
+                              Перепишіть завдання у зошит. Відскануйте або охайно сфотографуйте ваші відповіді і
+                              завантажте домашню роботу до цього уроку.
+                            </p>
+                            <h3>Вправи:</h3>
+                            <ol>
+                              <li>Запишіть у вигляді множини натуральні числа від 1 до 10.</li>
+                              <li>Маються множини A = {1, 2, 3, 4, 5} та B = {4, 5, 6, 7, 8}. Знайдіть їх перетин.</li>
+                              <li>Маються множини C = {2, 4, 6, 8} та D = {1, 3, 5, 7}. Знайдіть їх об'єднання.</li>
+                              <li>
+                                Маються множини E = {1, 2, 3, 4, 5} та F = {3, 4, 5, 6, 7}. Знайдіть різницю між E та F.
+                              </li>
+                              <li>
+                                Маються множини G = {1, 2, 3, 4, 5} та U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. Знайдіть
+                                доповнення множини G до множини U.
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="lesson-section__section">
+                        <h2 class="lesson-section__title">Моя домашня робота</h2>
+
+                        <!-- Загрузка файлол -->
+                        <div class="lesson-section__case">
+                          <button class="lesson-section__btn btn btn--accent" id="upload-homework">
+                            <svg class="btn__icon">
+                              <use xlink:href="img/sprite.svg#home"></use>
+                            </svg>
+                            Завантажити роботу
+                          </button>
+                        </div>
+                        <!-- Поле для ввода -->
+                        <div class="lesson-section__case">
+                          <div class="lesson-section__editor editor">
+                            <div class="editor__block"></div>
+                          </div>
+
+                          <button class="lesson-section__btn btn btn--accent">
+                            <svg class="btn__icon">
+                              <use xlink:href="img/sprite.svg#home"></use>
+                            </svg>
+                            Завантажити роботу
+                          </button>
+                        </div>
+
+                        <!-- Загружены файлы -->
+                        <div class="lesson-section__case">
+                          <div class="lesson-section__document-block document-block">
+                            <ul class="document-block__list">
+                              <li class="document-block__item document">
+                                <div class="document__wrapper">
+                                  <a
+                                    href="#"
+                                    class="document__remove"
+                                    type="button"
+                                    aria-label="Завантажити цей документ"
+                                    download
+                                  >
+                                    <svg class="document__remove-svg">
+                                      <use xlink:href="img/sprite.svg#remove"></use>
+                                    </svg>
+                                  </a>
+                                  <svg class="document__image">
+                                    <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                  </svg>
+                                  <span class="document__title">Презентація уроку 2</span>
+                                  <small class="document__weight">12 mb</small>
+                                </div>
+                              </li>
+                              <li class="document-block__item document">
+                                <div class="document__wrapper">
+                                  <a
+                                    href="#"
+                                    class="document__remove"
+                                    type="button"
+                                    aria-label="Завантажити цей документ"
+                                    download
+                                  >
+                                    <svg class="document__remove-svg">
+                                      <use xlink:href="img/sprite.svg#remove"></use>
+                                    </svg>
+                                  </a>
+                                  <svg class="document__image">
+                                    <use xlink:href="img/sprite.svg#avatar-image"></use>
+                                  </svg>
+                                  <span class="document__title">Презентація уроку 2</span>
+                                  <small class="document__weight">12 mb</small>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="lesson-section__edit">
+                            <button class="lesson-section__change">
+                              <svg class="lesson-section__change-svg">
+                                <use xlink:href="img/sprite.svg#edit"></use>
+                              </svg>
+                              Редагувати
+                              <span class="lesson-section__change-timer">( 14 хв 49 сек)</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Написан текст -->
+                        <div class="lesson-section__case">
+                          <div class="lesson-section__work">
+                            <ol>
+                              <li>
+                                Множина натуральних чисел від 1 до 10 можна записати у вигляді множини так: A = {1, 2,
+                                3, 4, 5, 6, 7, 8, 9, 10}.
+                              </li>
+                              <li>
+                                Щоб знайти перетин множин A та B, треба знайти числа, які належать обом множинам: A =
+                                {1, 2, 3, 4, 5}, B = {4, 5, 6, 7, 8}. Перетин множин A та B записується як A ∩ B. A ∩ B
+                                = {4, 5}.
+                              </li>
+                              <li>
+                                Щоб знайти об'єднання множин C та D, треба об'єднати всі елементи з обох множин: C = {2,
+                                4, 6, 8}, D = {1, 3, 5, 7}. Об'єднання множин C та D записується як C ∪ D. C ∪ D = {1,
+                                2, 3, 4, 5, 6, 7, 8}.
+                              </li>
+                              <li>
+                                Щоб знайти різницю множин E та F, треба видалити з множини E всі елементи, які також
+                                належать до множини F: E = {1, 2, 3, 4, 5}, F = {3, 4, 5, 6, 7}. Різниця множин E та F
+                                записується як E \ F. E \ F = {1, 2}.
+                              </li>
+                              <li>
+                                Щоб знайти доповнення множини G до множини U, треба видалити з множини U всі елементи,
+                                які належать до множини G: G = {1, 2, 3, 4, 5}, U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}.
+                                Доповнення множини G записується як U \ G. U \ G = {6, 7, 8, 9, 10}.
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="lesson-section__edit">
+                            <button class="lesson-section__change">
+                              <svg class="lesson-section__change-svg">
+                                <use xlink:href="img/sprite.svg#edit"></use>
+                              </svg>
+                              Редагувати
+                              <span class="lesson-section__change-timer">( 14 хв 49 сек)</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lesson-section__block" data-tab-content="Контрольна робота">
+                      <div class="lesson-section__deadline">
+                        Дедлайн:
+                        <div class="lesson-section__date date date--blue">26.04 16:00</div>
+                      </div>
+                      <div class="lesson-section__section">
+                        <div class="lesson-section__text">
+                          <h2>Зробіть контрольну роботу</h2>
+                        </div>
+
+                        <div class="lesson-section__case">
+                          <a href="#" class="lesson-section__btn btn btn--accent">
+                            <svg class="btn__icon">
+                              <use xlink:href="img/sprite.svg#pen"></use>
+                            </svg>
+                            Перейти до тесту
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+    @@include('../components/modals/upload.html') @@include('../components/modals/maintenance.html')
+  </body>
+</html>

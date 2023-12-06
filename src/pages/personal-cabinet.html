@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Мої дані'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="lesson-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header header--parent">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <h2 class="header__title">Мої дані</h2>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="content__container container">
+            <section class="personal-cabinet">
+              <div class="personal-cabinet__inner">
+                <div class="personal-cabinet__avatar load-avatar">
+                  <label for="avatar" class="load-avatar__label">
+                    <div class="load-avatar__image">
+                      <svg class="load-avatar__image-svg">
+                        <use xlink:href="img/sprite.svg#avatar-image"></use>
+                      </svg>
+                    </div>
+                    <span class="load-avatar__add">Додати фото</span>
+                    <input type="file" id="avatar" hidden="" accept="image/png, image/jpeg" />
+                  </label>
+                </div>
+                <div class="personal-cabinet__block">
+                  <ul class="personal-cabinet__list">
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Ім’я</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Олександра</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Призвіще</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Овчаренко</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">По-батькові</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Ігоревна</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Дата народження</span>
+                        <div class="personal-cabinet__line"></div>
+                        <time class="personal-cabinet__value">03.05.1990</time>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Стать</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Жінка</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Ступінь споріднення відносно учня</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Мати</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="personal-cabinet__list">
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Телефон</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">+38 (096) 12 12 321</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Пошта </span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Ovcharenko_Union@gmail.com</span>
+                      </div>
+                    </li>
+                    <li class="personal-cabinet__item personal-cabinet__item--edit">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Місто</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">Ігоревна</span>
+                      </div>
+                      <button class="personal-cabinet__edit">
+                        <svg class="personal-cabinet__edit-svg">
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="personal-cabinet__item personal-cabinet__item--edit">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Адреса</span>
+                        <div class="personal-cabinet__line"></div>
+                        <time class="personal-cabinet__value">Київ</time>
+                      </div>
+                      <button class="personal-cabinet__edit">
+                        <svg class="personal-cabinet__edit-svg">
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </li>
+
+                    <li class="personal-cabinet__item personal-cabinet__item--edit">
+                      <div class="personal-cabinet__wrapper">
+                        <span class="personal-cabinet__label">Пароль</span>
+                        <div class="personal-cabinet__line"></div>
+                        <span class="personal-cabinet__value">*** *** ****</span>
+                      </div>
+                      <button class="personal-cabinet__edit">
+                        <svg class="personal-cabinet__edit-svg">
+                          <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="personal-cabinet__docs">
+                  <h2 class="personal-cabinet__title">Скани документів</h2>
+                  <ul class="personal-cabinet__units">
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">Свідоцтво про народження</h3>
+                      </div>
+
+                      <ul class="document-block__list">
+                        <li class="document-block__item document">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title">Фото_27.04.2023</span>
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                        </li>
+                        <li class="document-block__item document document--error">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title"
+                              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, earum?</span
+                            >
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                          <div class="document__error">
+                            <svg class="document__error-icon">
+                              <use xlink:href="img/sprite.svg#warn"></use>
+                            </svg>
+                            Завантажте ще&nbsp;раз
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">Ідентифікаційний код</h3>
+                      </div>
+
+                      <ul class="document-block__list">
+                        <li class="document-block__item document">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title">Фото_27.04.2023</span>
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">Документ, що підтверджує спорідненість з дитиною</h3>
+                      </div>
+
+                      <ul class="document-block__list">
+                        <li class="document-block__item document document--error">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title"
+                              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, earum?</span
+                            >
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                          <div class="document__error">
+                            <svg class="document__error-icon">
+                              <use xlink:href="img/sprite.svg#warn"></use>
+                            </svg>
+                            Завантажте ще&nbsp;раз
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">Заява про зарахування до школи</h3>
+                      </div>
+
+                      <ul class="document-block__list">
+                        <li class="document-block__item document">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title">Фото_27.04.2023</span>
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">Інші документи</h3>
+                      </div>
+
+                      <ul class="document-block__list">
+                        <li class="document-block__item document">
+                          <div class="document__wrapper">
+                            <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                              <svg class="document__remove-svg">
+                                <use xlink:href="img/sprite.svg#remove"></use>
+                              </svg>
+                            </button>
+                            <svg class="document__image">
+                              <use xlink:href="img/sprite.svg#avatar-image"></use>
+                            </svg>
+                            <span class="document__title">Фото_27.04.2023</span>
+                            <small class="document__weight">12 mb</small>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="personal-cabinet__unit document-block">
+                      <div class="document-block__top">
+                        <h3 class="document-block__title">
+                          Додаткова інформація про стан здоров'я дитини (за потреби)
+                        </h3>
+                      </div>
+                      <div class="document-block__text">
+                        <p>Софія проявляє інтерес до розвитку творчих навичок та участі в групових активностях.</p>
+                        <p>Немає жодних хронічних захворювань або травм.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

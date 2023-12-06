@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Модалочки'})
+  </head>
+  <body>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem">
+      <button class="btn-1 btn btn--accent">Вхід</button>
+      <button class="btn-2 btn btn--accent">Відновлення паролю</button>
+      <button class="btn-3 btn btn--accent">Перевірте свою пошту</button>
+      <button class="btn-4 btn btn--accent">Створіть новий пароль</button>
+      <button class="btn-5 btn btn--accent">Завантаження документа</button>
+      <button class="btn-6 btn btn--accent">Введіть суму поповнення</button>
+      <button class="btn-7 btn btn--accent">Дякуюємо за поповнення</button>
+      <button class="btn-8 btn btn--accent">Вибачте але сталась якась помилка</button>
+      <button class="btn-9 btn btn--accent">Зміна зображення профілю</button>
+      <button class="btn-10 btn btn--accent">Обрізати й обернути</button>
+    </div>
+    @@include('../components/modals/login.html') @@include('../components/modals/reset-password.html')
+    @@include('../components/modals/check-email.html') @@include('../components/modals/create-new-password.html')
+    @@include('../components/modals/upload.html') @@include('../components/modals/deposit.html')
+    @@include('../components/modals/thanks.html') @@include('../components/modals/error.html')
+    @@include('../components/modals/change-photo.html') @@include('../components/modals/rotate.html')
+  </body>
+</html>

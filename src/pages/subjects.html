@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Мої предмети'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="base-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <h2 class="header__title">Мої предмети</h2>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="content__container container">
+            <section class="subjects">
+              <div class="subjects__inner">
+                <div class="subjects__left">
+                  <ul class="subjects__list">
+                    <li class="subjects__item">
+                      <a href="#" class="subjects__subject-card subject-card subject-card--purple">
+                        <div class="subject-card__left">
+                          <h2 class="subject-card__title">Математика</h2>
+                          <div class="subject-card__info">
+                            <div class="subject-card__teacher teacher">
+                              <div class="teacher__img">
+                                <img src="https://picsum.photos/200/300" alt="" />
+                              </div>
+                              Бондар Олег Михайлович
+                            </div>
+                            <div class="subject-card__marks">
+                              <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                              <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                            </div>
+                          </div>
+                          <p class="subject-card__description">
+                            Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними
+                            коренями та ірраціональними числами. Цей курс покаже приклади застосування властивостей
+                            квадратних коренів при розв'язуванні різних типів задач.
+                          </p>
+                        </div>
+                        <svg class="subject-card__icon">
+                          <use xlink:href="img/sprite.svg#math"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="subjects__item">
+                      <a href="#" class="subjects__subject-card subject-card subject-card--blue">
+                        <div class="subject-card__left">
+                          <h2 class="subject-card__title">УКРАЇНСЬКА МОВА</h2>
+                          <div class="subject-card__info">
+                            <div class="subject-card__teacher teacher">
+                              <div class="teacher__img">
+                                <img src="https://picsum.photos/200/300" alt="" />
+                              </div>
+                              Бондар Олег Михайлович
+                            </div>
+                            <div class="subject-card__marks">
+                              <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                              <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                            </div>
+                          </div>
+                          <p class="subject-card__description">
+                            Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними
+                            коренями та ірраціональними числами. Цей курс покаже приклади застосування властивостей
+                            квадратних коренів при розв'язуванні різних типів задач.
+                          </p>
+                        </div>
+                        <svg class="subject-card__icon">
+                          <use xlink:href="img/sprite.svg#guelder-rose"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="subjects__item">
+                      <a href="#" class="subjects__subject-card subject-card subject-card--red">
+                        <div class="subject-card__left">
+                          <h2 class="subject-card__title">Фізкільтура</h2>
+                          <div class="subject-card__info">
+                            <div class="subject-card__teacher teacher">
+                              <div class="teacher__img">
+                                <img src="https://picsum.photos/200/300" alt="" />
+                              </div>
+                              Бондар Олег Михайлович
+                            </div>
+                            <div class="subject-card__marks">
+                              <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                              <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                            </div>
+                          </div>
+                          <p class="subject-card__description">
+                            Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними
+                            коренями та ірраціональними числами. Цей курс покаже приклади застосування властивостей
+                            квадратних коренів при розв'язуванні різних типів задач.
+                          </p>
+                        </div>
+                        <svg class="subject-card__icon">
+                          <use xlink:href="img/sprite.svg#leg"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="subjects__item">
+                      <a href="#" class="subjects__subject-card subject-card subject-card--green">
+                        <div class="subject-card__left">
+                          <h2 class="subject-card__title">Фізика</h2>
+                          <div class="subject-card__info">
+                            <div class="subject-card__teacher teacher">
+                              <div class="teacher__img">
+                                <img src="https://picsum.photos/200/300" alt="" />
+                              </div>
+                              Бондар Олег Михайлович
+                            </div>
+                            <div class="subject-card__marks">
+                              <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                              <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                            </div>
+                          </div>
+                          <p class="subject-card__description">
+                            Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними
+                            коренями та ірраціональними числами. Цей курс покаже приклади застосування властивостей
+                            квадратних коренів при розв'язуванні різних типів задач.
+                          </p>
+                        </div>
+                        <svg class="subject-card__icon">
+                          <use xlink:href="img/sprite.svg#atom"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="subjects__item">
+                      <a href="#" class="subjects__subject-card subject-card subject-card--orange">
+                        <div class="subject-card__left">
+                          <h2 class="subject-card__title">Біологія</h2>
+                          <div class="subject-card__info">
+                            <div class="subject-card__teacher teacher">
+                              <div class="teacher__img">
+                                <img src="https://picsum.photos/200/300" alt="" />
+                              </div>
+                              Бондар Олег Михайлович
+                            </div>
+                            <div class="subject-card__marks">
+                              <div class="subject-card__mark">Прогнозована оцінка: <span>8</span></div>
+                              <div class="subject-card__mark">Відвідуваність: <span>80% (8/10)</span></div>
+                            </div>
+                          </div>
+                          <p class="subject-card__description">
+                            Під час вивчення онлайн-курсу з алгебри для 8-го класу учні ознайомляться з квадратними
+                            коренями та ірраціональними числами. Цей курс покаже приклади застосування властивостей
+                            квадратних коренів при розв'язуванні різних типів задач.
+                          </p>
+                        </div>
+                        <svg class="subject-card__icon">
+                          <use xlink:href="img/sprite.svg#dna"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="subjects__right">Реклама</div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

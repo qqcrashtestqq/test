@@ -1,0 +1,60 @@
+<div class="modal modal--big change-photo">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__main">
+        <button class="modal__close">
+          <svg class="modal__close-svg">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal__title">Зміна зображення профілю</h2>
+
+        <div class="modal__wrapper">
+          <div class="modal__warn">
+            <svg>
+              <use xlink:href="img/sprite.svg#warn"></use>
+            </svg>
+            <strong> Увага!</strong>
+            <p>Фото можна змінити тільки раз на рік</p>
+          </div>
+          <form class="modal__from">
+            <div class="modal__upload">
+              <svg class="modal__upload-svg">
+                <use xlink:href="img/sprite.svg#upload"></use>
+              </svg>
+              <div class="modal__drop">
+                <span
+                  >Перетягніть <br />
+                  або</span
+                >
+                <label for="upload-files">
+                  оберіть файл
+                  <input type="file" id="upload-files" hidden />
+                </label>
+              </div>
+            </div>
+            <div class="modal__document document">
+              <div class="document__wrapper">
+                <button class="document__remove" type="button" aria-label="Видалити цей документ">
+                  <svg class="document__remove-svg">
+                    <use xlink:href="img/sprite.svg#remove"></use>
+                  </svg>
+                </button>
+                <svg class="document__image">
+                  <use xlink:href="img/sprite.svg#avatar-image"></use>
+                </svg>
+                <span class="document__title"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, earum?</span
+                >
+                <small class="document__weight">12 mb</small>
+              </div>
+            </div>
+
+            <button class="modal__btn btn btn--accent">Відправити на перевірку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

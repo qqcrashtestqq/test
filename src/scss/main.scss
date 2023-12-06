@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import 'abstracts/functions', 'abstracts/mixins', 'abstracts/variables';
+
+// 2. Vendors
+@import 'vendors/index';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/auth-layout';
+@import 'layout/base-layout';
+@import 'layout/lesson-layout';
+
+// 5. Components ui
+@import 'components/ui/btn';
+@import 'components/ui/load-avatar';
+@import 'components/ui/field';
+@import 'components/ui/input';
+@import 'components/ui/select';
+@import 'components/ui/radio';
+@import 'components/ui/checkbox';
+@import 'components/ui/document';
+@import 'components/ui/link';
+@import 'components/ui/teacher';
+@import 'components/ui/teacher-card';
+@import 'components/ui/lesson';
+@import 'components/ui/progress';
+@import 'components/ui/tooltip';
+@import 'components/ui/todo-item';
+@import 'components/ui/statistics-block';
+@import 'components/ui/rating-block';
+@import 'components/ui/course-progress';
+@import 'components/ui/recommended-card';
+@import 'components/ui/theme-card';
+@import 'components/ui/todo-block';
+@import 'components/ui/marks';
+@import 'components/ui/pagination';
+@import 'components/ui/editor';
+@import 'components/ui/subject-card';
+@import 'components/ui/plan';
+@import 'components/ui/types';
+@import 'components/ui/material-card';
+@import 'components/ui/table';
+@import 'components/ui/date';
+@import 'components/ui/stepper';
+@import 'components/ui/lesson-card';
+@import 'components/ui/lesson-label';
+@import 'components/ui/lessons-schedule';
+@import 'components/ui/lesson-modal';
+@import 'components/ui/occupation';
+
+// 6. All Components
+@import 'components/header';
+@import 'components/auth-header';
+@import 'components/auth-content';
+@import 'components/aside';
+@import 'components/nav';
+@import 'components/document-block';
+@import 'components/modal';
+@import 'components/content';
+@import 'components/schedule';
+@import 'components/tip';
+@import 'components/todo';
+@import 'components/create';
+@import 'components/statistics';
+@import 'components/recommended';
+@import 'components/banner';
+@import 'components/content-tabs';
+@import 'components/lesson-section';
+@import 'components/maintenance';
+@import 'components/subjects';
+@import 'components/subject';
+@import 'components/graph';
+@import 'components/marks-table';
+@import 'components/schedule-tabs';
+@import 'components/schedule-table';
+@import 'components/wallet';
+@import 'components/personal-cabinet';
+@import 'components/notifications';
+@import 'components/footer';

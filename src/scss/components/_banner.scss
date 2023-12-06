@@ -1,0 +1,17 @@
+.banner {
+  @include flex-all-center;
+
+  overflow: hidden;
+  border-radius: rem(10);
+  min-height: rem(187);
+  background-color: var(--grey-6);
+
+  &__inner {
+  }
+}
+
+@include mq('lg') {
+  .banner {
+    display: none;
+  }
+}

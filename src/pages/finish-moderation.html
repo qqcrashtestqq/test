@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Реєстрація'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body>
+    <div class="auth-layout">
+      <aside class="aside aside--static">
+        <div class="aside__wrapper">
+          <div class="aside__top">
+            <a href="#" class="aside__logo">
+              <svg
+                class="aside__top-svg"
+                width="72"
+                height="28"
+                viewBox="0 0 72 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="aside__top-path"
+                  d="M13.3477 1.63601H17.6531V14.8604C17.6531 16.3453 17.2984 17.6445 16.5891 18.7582C15.8865 19.8718 14.9021 20.7402 13.636 21.3633C12.3699 21.9798 10.895 22.288 9.21129 22.288C7.52095 22.288 6.04273 21.9798 4.77663 21.3633C3.51054 20.7402 2.52616 19.8718 1.82351 18.7582C1.12086 17.6445 0.769531 16.3453 0.769531 14.8604V1.63601H5.07493V14.4925C5.07493 15.2681 5.24396 15.9575 5.58203 16.5607C5.92673 17.1639 6.41063 17.6379 7.03374 17.9826C7.65684 18.3273 8.38269 18.4996 9.21129 18.4996C10.0465 18.4996 10.7724 18.3273 11.3889 17.9826C12.012 17.6379 12.4925 17.1639 12.8306 16.5607C13.1753 15.9575 13.3477 15.2681 13.3477 14.4925V1.63601Z"
+                  fill="#4F4F4F"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="auth-header">
+          <div class="auth-header__container auth-container">
+            <div class="auth-header__inner">
+              <svg class="auth-header__inner-svg">
+                <use xlink:href="img/sprite.svg#account"></use>
+              </svg>
+              <h1 class="auth-header__title">Реєстрація</h1>
+            </div>
+          </div>
+        </header>
+
+        <div class="auth-content auth-content--center">
+          <div class="auth-content__container auth-container">
+            <div class="auth-content__message">
+              <h2 class="auth-content__head">Ви успішно пройшли модерацію</h2>
+              <div class="auth-content__smile auth-content__smile--mobile">
+                <svg class="auth-content__smile-svg">
+                  <use xlink:href="img/sprite.svg#mood-true"></use>
+                </svg>
+                <div class="auth-content__text">
+                  <p>Вітаємо! Ваш обліковий запис був успішно активовано.</p>
+                  <p>
+                    Тепер ви можете отримати доступ до всіх наших навчальних ресурсів та почати свою освітню подорож.
+                  </p>
+                </div>
+              </div>
+
+              <a href="/" class="auth-content__link btn btn--accent">До особистого кабінету</a>
+            </div>
+          </div>
+        </div>
+
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    @@include('../components/_head.html', {title: 'Гаманець'})
+
+    <meta property="og:title" content="Title" />
+    <meta property="og:url" content="url" />
+    <meta property="og:image" content="img/favicon/favicon.svg" />
+  </head>
+  <body class="body-mob-fixed">
+    <div class="base-layout">
+      @@include("../components/_aside.html")
+      <main class="main">
+        <header class="header">
+          <div class="header__container container">
+            <div class="header__inner">
+              <div class="header__left">
+                <h2 class="header__title">Гаманець</h2>
+              </div>
+              <div class="header__right">
+                <div class="header__time">
+                  <span class="header__hours"></span>
+                  <span class="header__minutes"></span>
+                  <span class="header__seconds"></span>
+                </div>
+                <div class="header__user">
+                  <div class="header__block">
+                    <button class="header__notifications">
+                      <svg class="header__notifications-svg">
+                        <use xlink:href="img/sprite.svg#notifications"></use>
+                      </svg>
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__ntf notifications">
+                        <div class="notifications__top">
+                          <button class="notifications__close" id="notifications-close">
+                            <svg class="notifications__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <span class="notifications__top-name">Сповіщення</span>
+                        </div>
+                        <div class="notifications__inner">
+                          <div class="notifications__block">
+                            <div class="notifications__head">Нові сповіщення</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--blue">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>
+                                    ДLorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto nihil dolore non
+                                    ab minima vero eius suscipit eos laborum.
+                                  </span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--orange">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span> Тест по Укр. мові</span>
+                                  <div class="notifications__date date date--orange">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="notifications__block">
+                            <div class="notifications__head">Переглянуті сьогодні</div>
+                            <ul class="notifications__list">
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#cours"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Додано курс «Образотворче мистецтво»</span>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                              <li class="notifications__item notifications__item--read">
+                                <svg class="notifications__item-icon">
+                                  <use xlink:href="img/sprite.svg#warn"></use>
+                                </svg>
+                                <div class="notifications__item-text">
+                                  <span>Вчитель математики відкрив доступ до уроку</span>
+                                  <div class="notifications__date date date--grey">15.04 9:00</div>
+                                </div>
+                                <time class="notifications__item-time">15.04.23 - 10:52</time>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__block">
+                    <button class="header__avatar" id="header-avatar">
+                      <img class="header__avatar-image" src="https://picsum.photos/200/300" alt="" />
+                    </button>
+                    <div class="header__wrapper">
+                      <div class="header__info">
+                        <div class="header__top">
+                          <button class="header__close" id="header-close">
+                            <svg class="header__close-svg">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                          </button>
+                          <img class="header__top-image" src="https://picsum.photos/200/300" alt="" />
+                          <span class="header__top-name">Лисенко Олександра</span>
+                        </div>
+                        <ul class="header__list">
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#account"></use>
+                              </svg>
+                              Моя картка
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#file"></use>
+                              </svg>
+                              Мої файли
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#play"></use>
+                              </svg>
+                              База знань
+                            </a>
+                          </li>
+                          <li class="header__item">
+                            <a href="#" class="header__link">
+                              <svg class="header__link-svg">
+                                <use xlink:href="img/sprite.svg#logo"></use>
+                              </svg>
+                              Про Unity
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="header__language">
+                          <button class="header__lang header__lang--active">Укр</button>
+                          <button class="header__lang">Рус</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="content__container container">
+            <section class="content__wallet wallet">
+              <div class="wallet__inner">
+                <div class="wallet__left">
+                  <div class="wallet__top">
+                    <div class="wallet__balance">Ваш баланс: <span>15 000 ₴</span></div>
+                    <button class="wallet__btn btn btn--accent">
+                      <svg class="btn__icon">
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                      поповнити
+                    </button>
+                  </div>
+                  <div class="wallet__content">
+                    <div class="wallet__head">
+                      <div class="wallet__unit wallet__unit--action">
+                        Дата та час
+                        <svg class="wallet__unit-svg">
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </div>
+                      <div class="wallet__unit wallet__unit--action">
+                        Сума
+                        <svg class="wallet__unit-svg">
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </div>
+                      <div class="wallet__unit">Опис</div>
+                      <div class="wallet__unit wallet__unit--action">
+                        Дитина
+                        <svg class="wallet__unit-svg">
+                          <use xlink:href="img/sprite.svg#sort"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <ul class="wallet__list">
+                      <li class="wallet__item wallet__item--income">
+                        <time>15.04.23 - 12:30</time>
+                        <strong>+ 4500 ₴</strong>
+                        <p>
+                          Процедура пополнения счета представляет собой удобный и безопасный способ увеличить доступные
+                          средства на вашем аккаунте. Современная система пополнения счета обеспечивает мгновенное
+                          перечисление средств и минимизирует риски. Вам нужно всего лишь выбрать удобный метод платежа,
+                          ввести необходимую сумму и подтвердить операцию.
+                        </p>
+                        <span>Оооооооооооооочень длинное имя</span>
+                      </li>
+                      <li class="wallet__item wallet__item--outcome">
+                        <time>15.04.23 - 12:30</time>
+                        <strong>- 4500 ₴</strong>
+                        <p>Курс</p>
+                      </li>
+                      <li class="wallet__item wallet__item--outcome">
+                        <time>15.04.23 - 12:30</time>
+                        <strong>+ 15000 ₴</strong>
+                        <span>Влад</span>
+                      </li>
+                      <li class="wallet__item wallet__item--income">
+                        <time>15.04.23 - 12:30</time>
+                        <strong>+ 4500 ₴</strong>
+                        <p>Поповнення</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wallet__pagination pagination pagination--new">
+                    <button class="pagination__btn pagination__btn--prev">
+                      <svg class="pagination__btn-svg">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+                    <ul class="pagination__list">
+                      <li class="pagination__item">
+                        <a href="#" class="pagination__link pagination__link--active">1</a>
+                      </li>
+                      <li class="pagination__item"><a href="/?_page=2" class="pagination__link">2</a></li>
+                      <li class="pagination__item"><a href="/?_page=3" class="pagination__link">3</a></li>
+                      <li class="pagination__item"><a href="/?_page=4" class="pagination__link">...</a></li>
+                      <li class="pagination__item"><a href="/?_page=4" class="pagination__link">12</a></li>
+                    </ul>
+                    <button class="pagination__btn pagination__btn--next">
+                      <svg class="pagination__btn-svg">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="wallet__right">add</div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include("../components/_footer.html")
+      </main>
+    </div>
+  </body>
+</html>
